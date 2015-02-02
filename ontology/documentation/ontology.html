@@ -1,0 +1,5516 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Quakestudies Repository: ontology documentation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container">
+<a class="brand" href="#">Quakestudies Repository: ontology description</a><ul class="nav">
+<li class="active dropdown">
+<a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Ontology <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="index.html">Ontology documentation</a></li>
+<li class="divider">
+<li><a href="introduction.html">Ontology introduction</a></li>
+<li><a href="../owl/ceismic.owl">OWL-RDF ontology</a></li>
+<li><a href="ontology.html">Ontology description</a></li>
+<li><a href="vocabularies.html">Vocabularies</a></li>
+<li><a href="../owl/ceismic.gif">Ontology diagram</a></li>
+<li><a href="mappings.html">Mappings</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="system.html" class="dropdown-toggle" data-toggle="dropdown">System <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="system.html">System documentation</a></li>
+<li class="divider">
+<li><a href="system.html#architecture">Architecture</a></li>
+<li><a href="system.html#administration_interfaces">Administration interfaces</a></li>
+<li><a href="system.html#authentication">Authentication</a></li>
+<li><a href="system.html#authorisation">Authorisation</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="user.html" class="dropdown-toggle" data-toggle="dropdown">User <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="user.html">User documentation</a></li>
+<li class="divider">
+<li><a href="user.html#roles">Roles</a></li>
+<li><a href="user.html#workflows">Workflows</a></li>
+<li><a href="user.html#bulk_ingest">Generic bulk ingest</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="api.html" class="dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="api.html">API documentation</a></li>
+<li class="divider">
+<li><a href="api.html#Introduction">Introduction</a></li>
+<li><a href="api.html#ResourceIndexSearch">Resource index search</a></li>
+<li><a href="api.html#RESTAPI">REST API</a></li>
+</ul>
+</li>
+</ul>
+</div></div></div>
+<div class="container">
+<div class="hero-unit" style="position: relative;">
+<div><img src="assets/eq-info.jpg" width="200"></div>
+<div style="position: absolute; left: 300px; top: 52px;">
+<h1>Ontology description</h1>
+<p>Documentation about all fields in the Quakestudies ontology.</p>
+</div>
+</div>
+<div class="nav"><p class="trigger"><a href="#">toggle all</a></p></div>
+<div class="span8 offset2">
+<h1>Classes in the Quakestudies ontology</h1>
+<div class="class_name">
+<h2 class="trigger"><a href="#">Format</a></h2>
+<div class="toggle_container">
+<ul>
+<li>An instance of the Format class</li>
+<li>Represents the Format class, and as such is a container element. Note that the identifier will typically be the value of the mime_type element.</li>
+</ul>
+<table class="element">
+<tr class="element_name"><td colspan="2">format_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#format_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>format_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:title</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Is the human-readable version of DCMI Type (e.g. "MovingImage" =&gt; "Moving Image").</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:title&gt;Moving Image&lt;/dc:title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">format_description</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#format_description</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>format_description</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:description</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">mime_type</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#mime_type</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>mime_type</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates format according to the Internet Media Types vocabulary</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Mime types can be obtained from the Internet MIME Media Types vocabulary maintained by the Internet Assigned Numbers Authority: http://www.iana.org/assignments/media-types/index.html. http://mediatypes.appspot.com/ provides a means of associating a MIME type with a stable URI.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:mime_type&gt;text/xsl&lt;/qsr:mime_type&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">format_type</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#format_type</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>format_type</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>The type of the format, as defined by the DCMI Type vocabulary (http://dublincore.org/documents/dcmi-type-vocabulary/)</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>As DCMI Types are rather limited, CEISMIC may want to extend the vocabulary to include finer granularity when specifying type</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:format_type&gt;MovingImage&lt;/qsr:format_type&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">loadedInBatch</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#loadedInBatch</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>loadedinbatch</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#ContentPartner<br>#Collection<br>#Position<br>#Person<br>#Party<br>#Category<br>#Part<br>#Format<br>#Object<br>#License<br>#DateTime<br>#Event<br>#Address<br>#Availability<br>#Audience<br>#Role<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="class_name">
+<h2 class="trigger"><a href="#">Audience</a></h2>
+<div class="toggle_container">
+<ul>
+<li>An instance of the Audience class</li>
+<li>Represents the Audience class, and as such is a container element</li>
+</ul>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasConstituentRole</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasConstituentRole</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hasconstituentrole</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates the roles of which the audience is composed</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasConstituentRole will be the identifier of a Role</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Multiple</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasConstituentRole rdf:resource="info:fedora/qsr-role:1"&gt;&lt;/qsr_rel:hasConstituentRole&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">audience_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#audience_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>audience_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:title. A human-readable name for a given audience, being a grouping of roles</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:title&gt;Researchers&lt;/dc:title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">audience_description</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#audience_description</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>audience_description</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:description</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">loadedInBatch</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#loadedInBatch</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>loadedinbatch</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#ContentPartner<br>#Collection<br>#Position<br>#Person<br>#Party<br>#Category<br>#Part<br>#Format<br>#Object<br>#License<br>#DateTime<br>#Event<br>#Address<br>#Availability<br>#Audience<br>#Role<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="class_name">
+<h2 class="trigger"><a href="#">Collection</a></h2>
+<div class="toggle_container">
+<ul>
+<li>An instance of the Collection class</li>
+<li>Represents the Collection class, and as such is a container element. Note that Collection is a reflexive class.</li>
+</ul>
+<table class="element">
+<tr class="element_name"><td colspan="2">isPublishedBy</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#isPublishedBy</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>ispublishedby</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the ContentPartner class which publishes this collection</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of isPublishedBy will be the identifier of an instance of the ContentPartner class</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Multiple</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:isPublishedBy rdf:resource="info:fedora/qsr-contentpartner:4"&gt;&lt;/qsr_rel:isPublishedBy&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">collection_description</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#collection_description</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>collection_description</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:description</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">collection_display_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#collection_display_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>collection_display_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Provides the human-readable descriptive name of the collection of digital objects, for external use.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>If no value is entered for this element, it will defer to the value stored in the collection_name element</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:collection_display_title&gt;Quake studies general collection&lt;/qsr:collection_display_title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">collection_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#collection_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>collection_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:title. Provides the human-readable descriptive name of the collection of digital objects, for internal and possibly external use.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>A collection can be thought of either as that relating a an external provider (content partner), or a grouping of digital objects residing locally. Note that each digital object must reside in one and only one collection, which actually may be the default collection.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:title&gt;
+    Quake studies general collection (all objects not otherwise described end up here)
+&lt;/dc:title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">collection_thumbnail</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#collection_thumbnail</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>collection_thumbnail</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>The thumbnail used to represent the collection.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>If not supplied, display wil default to the first available part thumbnail.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:collection_thumbnail&gt;http://quakestudies.canterbury.ac.nz/collection1/thumbnail.jpg&lt;/qsr:collection_thumbnail&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">loadedInBatch</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#loadedInBatch</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>loadedinbatch</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#ContentPartner<br>#Collection<br>#Position<br>#Person<br>#Party<br>#Category<br>#Part<br>#Format<br>#Object<br>#License<br>#DateTime<br>#Event<br>#Address<br>#Availability<br>#Audience<br>#Role<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">isCollectedInto</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#isCollectedInto</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>iscollectedinto</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Collection which can be regarded collecting this Object</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of isCollectedInto will be the identifier of an instance of the Collection class. Each Object will be related to one and only one Collection.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Multiple</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:isCollectedInto rdf:resource="info:fedora/qsr-collection:3"&gt;&lt;/qsr_rel:isCollectedInto&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Collection<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">version</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#version</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>version</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates the version of the content</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Freetext (i.e. not backed by any vocabulary) used to indicate the verison of the content.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:version&gt;1.02&lt;/qsr:version&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Part<br>#Collection<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">tags</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#tags</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>tags</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>A comma-delimited list indicating the tags that apply to this content.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Tags are stored as free-text, but the intention is to make them available via search.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:tags&gt;earthquake, aftershock, damage&lt;/qsr:tags&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Part<br>#Collection<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="class_name">
+<h2 class="trigger"><a href="#">DateTime</a></h2>
+<div class="toggle_container">
+<ul>
+<li>An instance of the DateTime class</li>
+<li>Represents the DateTime class, and as such is a container element.</li>
+</ul>
+<table class="element">
+<tr class="element_name"><td colspan="2">point_datetime_description</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#point_datetime_description</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>point_datetime_description</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:description</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">point_datetime_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#point_datetime_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>point_datetime_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:title</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:title&gt;2011-01-13T14:30:5&lt;/dc:title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">point_datetime_type</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#point_datetime_type</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>point_datetime_type</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Provides an indication of the exactness of the value represented in point_datetime`</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The vocabulary employs the following terms: exact, circa</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:point_datetime_type&gt;exact&lt;/qsr:point_datetime_type&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">point_datetime</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#point_datetime</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>point_datetime</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Provides a datetime string (as specified by ISO 8601) which indicates either a date or a datetime.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>ISO 8601 allows datetime values of varying completeness (e.g. “2011”, “2011-01”, “2011-01-13” and “2011-01-13T14:30:5”)</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:point_datetime&gt;2011-01-13T14:30:5&lt;/qsr:point_datetime&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">point_datetime_zone</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#point_datetime_zone</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>point_datetime_zone</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Local timezone of datetime (typicaly NZST or NZDST)</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Will allow translation of local datetime to UTC if necessary</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:point_datetime_zone&gt;NZST&lt;/qsr:point_datetime_zone&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">loadedInBatch</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#loadedInBatch</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>loadedinbatch</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#ContentPartner<br>#Collection<br>#Position<br>#Person<br>#Party<br>#Category<br>#Part<br>#Format<br>#Object<br>#License<br>#DateTime<br>#Event<br>#Address<br>#Availability<br>#Audience<br>#Role<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="class_name">
+<h2 class="trigger"><a href="#">Part</a></h2>
+<div class="toggle_container">
+<ul>
+<li>An instance of the Part class</li>
+<li>Represents the Part class, and as such is a container element. Part is used as a given Object may have two or more component parts which have different availability criteria, format specifications, and creator and contributors. Think of a book (Object) which may have an author (Creator), but may also contain photographs created by other individuals.</li>
+</ul>
+<table class="element">
+<tr class="element_name"><td colspan="2">partHasPosition</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#partHasPosition</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>parthasposition</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasPosition will be the identifier of the geographic coordinates as specified for a given Position</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Multiple</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasPosition rdf:resource="info:fedora/qsr-position:6"&gt;&lt;/qsr_rel:hasPosition&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasAvailability</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasAvailability</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hasavailability</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Availability which has defines the access an Audience has to the Part</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasAvailability will be the identifier of an instance of the Availability class. A Part may have many Availabilities, each with different Availability conditions. For example, a Part may be available to the same Audience, but over two distinct and exclusive time periods.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Multiple</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasAvailability rdf:resource="info:fedora/qsr-availability:2	"&gt;&lt;/qsr_rel:hasAvailability	&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasLicense</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasLicense</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>haslicense</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates the license under which the availability is made</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasLicense will be the identifier of an instance of the License class</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasLicense rdf:resource="info:fedora/qsr-license:2"&gt;&lt;/qsr_rel:hasLicense&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">source_url</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#source_url</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>source_url</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>An HTTP URL resolving to an HTML landing page for the source of the Part</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Must be an HTTP URL pointing to a resource which matches the human-readable description in source</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:source_url&gt;http://quakestudies.canterbury.ac.nz/object_123456/part_1/audio.mp3&lt;/qsr:source_url&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">copyright_name</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#copyright_name</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>copyright_name</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>The copyright information associated with the Part, to be displayed with representations of the Part</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Although License and Availability can be used to provide generic information relating to copyright, there is often the need to provide specific copyright information.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:copyright_name&gt;Please contact the author for conditions of use&lt;/qsr:copyright_name&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">part_description</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#part_description</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>part_description</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:description</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:description&gt;A colour image of the damage in Cashall Street&lt;/dc:description&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">landing_url</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#landing_url</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>landing_url</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>An HTTP URL resolving to an HTML landing page for the source of the Part</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>HTTP URL pointing to a resource which is the landing page for the resource, which may include for example metadata as well as the resource.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:landing_url&gt;http://quakestudies.canterbury.ac.nz/object_123456/part_1&lt;/qsr:landing_url&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">source</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#source</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>source</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>A related resource from which the described resource is derived.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Although ideally containing a value from a formal identification system (e.g. URL), the presence of source_url allows us to use a human-readable descriptive name in source if necessary</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:source&gt;Interviews conducted by University of Canterbury researchers, September 2011&lt;/dc:source&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">part_thumbnail</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#part_thumbnail</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>part_thumbnail</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>The thumbnail image that represents the part.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">language</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#language</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>language</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>A language of the resource.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Should be the main language of the Part, described using ISO 639-1</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:language&gt;en&lt;/dc:language&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">part_creation_date</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#part_creation_date</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>part_creation_date</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Date the object was originally created (i.e. not the ingest date)</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasFormat</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasFormat</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hasformat</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Format which describes the file format, physical medium, or dimensions of the Part.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasFormat will be the identifier of an instance of the Format class. It is compulsory as the mimetype (and therefore format) of a Part must be known in order to make the Part available.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasFormat rdf:resource="info:fedora/qsr-format:3"&gt;&lt;/qsr_rel:hasFormat&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">part_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#part_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>part_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:title</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:title&gt;Photograph of Cashel Street, Pic01234&lt;/dc:title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">original_filename</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#original_filename</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>original_filename</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>The name of the original filename, as supplied for ingest</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">isPartOf</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#isPartOf</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>ispartof</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Object which the Part is a component of.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of isPartOf will be the identifier of an instance of the Object class. It is compulsory as a Part must belong to one and only one Object.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:isPartOf 	rdf:resource="info:fedora/qsr-object:5"&gt;&lt;/qsr_rel:isPartOf&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">extent</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#extent</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>extent</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>The extent (or size) of the resource</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Would typically be used to give an indication of either physical size (e.g. hectarage) or logical size (e.g. kilobytes)</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:extent&gt;1024 Kilobytes&lt;/qsr:extent&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">derivative_type</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#derivative_type</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>derivative_type</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Used to indicate whether a part is original, derivative, or otherwise</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasAddress</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasAddress</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hasaddress</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Address to which this Object is related</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasAddress will be the identifier of an instance of the  Address class</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Multiple</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasAddress rdf:resource="info:fedora/qsr-address:2"&gt;&lt;/qsr_rel:hasAddress&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Party<br>#Part<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">loadedInBatch</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#loadedInBatch</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>loadedinbatch</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#ContentPartner<br>#Collection<br>#Position<br>#Person<br>#Party<br>#Category<br>#Part<br>#Format<br>#Object<br>#License<br>#DateTime<br>#Event<br>#Address<br>#Availability<br>#Audience<br>#Role<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasCategory</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasCategory</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hascategory</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Category to which this Object is related</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasCategory will be the identifier of an instance of the  Category class</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasCategory rdf:resource="info:fedora/qsr-category:1"&gt;&lt;/qsr_rel:hasCategory&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Category<br>#Part<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasCreatorParty</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasCreatorParty</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hascreatorparty</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Party which has a creatorial relationship to this Object</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasCreatorParty will be the identifier of an instance of the  Party class. It is not compulsory as often the creator of an Object may be unknown.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Multiple</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasCreatorParty rdf:resource="info:fedora/qsr-party:5"&gt;&lt;/qsr_rel:hasCreatorParty&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Part<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasRelationshipToEvent</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasRelationshipToEvent</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hasrelationshiptoevent</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Event with which this Object has some relationship</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasRelationshipToEvent will be the identifier of an instance of the Event class.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Multiple</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasRelationshipToEvent rdf:resource="info:fedora/qsr-event:4"&gt;&lt;/qsr_rel:hasRelationshipToEvent&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Part<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">version</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#version</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>version</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates the version of the content</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Freetext (i.e. not backed by any vocabulary) used to indicate the verison of the content.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:version&gt;1.02&lt;/qsr:version&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Part<br>#Collection<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">tags</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#tags</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>tags</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>A comma-delimited list indicating the tags that apply to this content.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Tags are stored as free-text, but the intention is to make them available via search.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:tags&gt;earthquake, aftershock, damage&lt;/qsr:tags&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Part<br>#Collection<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">creator_credit</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#creator_credit</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>creator_credit</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>The creator credit associated with the digital object, typically used to accompany the digital object when presented to the final user (e.g. as a photo credit)</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Creator credit is required because often there is particular information that needs to be presented with a digital object which is difficult to synthesise from other information (such as the creator name)</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:creator_credit&gt;Used by permission of the estate of Ngaire Best&lt;/qsr:creator_credit&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Part<br>#Object<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">weight</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#weight</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>weight</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates either weighting or ordinal position</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Weight can be used to either indicate relative weightings within a group of class instances (e.g. objects within a collection)  in which case multiple instances can share the same weighting.
+Alternatively weighting can be used to indicate ordinal position (e.g. parts within an object), in which case all instances within the group should have a unique value for this property.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Part<br>#Object<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="class_name">
+<h2 class="trigger"><a href="#">Role</a></h2>
+<div class="toggle_container">
+<ul>
+<li>An instance of the Role class, and as such is a container element.</li>
+<li>Represents the Role class and is used to represent the role of a particular Party (Person or Organisation) or Audience. Note that role is not related in any way to Object, and the intention is that role-based permissions regarding access can mapped from Availability to Party via Audience</li>
+</ul>
+<table class="element">
+<tr class="element_name"><td colspan="2">role_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#role_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>role_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:title</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Roles should include: superuser, administrator, archivist, cataloguer, researcher, public.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:title&gt;administrator&lt;/dc:title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">role_description</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#role_description</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>role_description</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:description</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">role_level</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#role_level</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>role_level</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>A value allowing system-based determination of default privileges for a given role.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Indicates the level of privilege for the role, to allow system-based detemrination of privleges for users for a given role. role_level = internal indicates an internal user with some degree of permission (though typically not as much as an administrator), whereas role_level = external indicates an external / public user with low levels of privilege.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:role_level&gt;internal&lt;/qsr:role_level&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">role_access</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#role_access</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>role_access</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Differentiates between read-only and update access to an object/part</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">loadedInBatch</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#loadedInBatch</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>loadedinbatch</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#ContentPartner<br>#Collection<br>#Position<br>#Person<br>#Party<br>#Category<br>#Part<br>#Format<br>#Object<br>#License<br>#DateTime<br>#Event<br>#Address<br>#Availability<br>#Audience<br>#Role<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="class_name">
+<h2 class="trigger"><a href="#">Address</a></h2>
+<div class="toggle_container">
+<ul>
+<li>An instance of the Address class</li>
+<li>Represents the Address class, and as such is a container element</li>
+</ul>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasPosition</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasPosition</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hasposition</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates the geographic position</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasPosition will be the identifier of the geographic coordinates as specified for a given Position</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Multiple</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasPosition rdf:resource="info:fedora/qsr-position:6"&gt;&lt;/qsr_rel:hasPosition&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">address_description</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#address_description</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>address_description</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:description</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">placename</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#placename</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>placename</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>A human-readable name which represents a geographic location, ranging from the local formal (“12 Amberly Street”) or informal (“front yard”) to the wider geographic entities (“Christchurch” or “Canterbury”)</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Placename is intended to be used as a descriptive name rather than a unique identifier (which will instead be the latitude and longitude elements of the Position class)</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:placename&gt;Waverly&lt;/qsr:placename&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">postcode</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#postcode</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>postcode</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>A numeric postcode or rural delivery code identifying the local region, as maintained by the New Zealand Post Office using the Postal Network File (http://www.nzpost.co.nz/business/direct-marketing/direct-marketing-products-services/quality-addressing/postcode-network-file).</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Postcodes can be associated with geographic co-ordinates (latitude and longitude), thus providing users entering data a simple means of specifying geo-coordinates.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:postcode&gt;4013&lt;/qsr:postcode&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">address_priority</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#address_priority</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>address_priority</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates whether the address is the main or ancilliary address</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">address_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#address_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>address_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:title</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:title&gt;Waverly&lt;/dc:title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">suburb</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#suburb</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>suburb</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Suburb</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:suburb&gt;Fendalton&lt;/qsr:suburb&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">street_name</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#street_name</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>street_name</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Street name</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:street_name&gt;Birchwood&lt;/qsr:street_name&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">city</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#city</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>city</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>City</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:city&gt;Christchurch&lt;/qsr:city&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">po_box</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#po_box</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>po_box</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Post office box number</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:po_box&gt;9120&lt;/qsr:po_box&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">street_number</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#street_number</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>street_number</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Street number</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Is a string as street numbers can be quite freeform (12A, 14/1 etc).</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:street_number&gt;12-16&lt;/qsr:street_number&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">loadedInBatch</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#loadedInBatch</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>loadedinbatch</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#ContentPartner<br>#Collection<br>#Position<br>#Person<br>#Party<br>#Category<br>#Part<br>#Format<br>#Object<br>#License<br>#DateTime<br>#Event<br>#Address<br>#Availability<br>#Audience<br>#Role<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="class_name">
+<h2 class="trigger"><a href="#">Object</a></h2>
+<div class="toggle_container">
+<ul>
+<li>An instance of the Object class</li>
+<li>Represents the Object class, and as such is a container element.</li>
+</ul>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasSourceParty</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasSourceParty</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hassourceparty</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Party from which the Object was obtained (which may not be the creator or contributor)</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasSourceParty will be the identifier of an instance of the  Party class</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Multiple</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasSourceParty rdf:resource="info:fedora/qsr-party:5"&gt;&lt;/qsr_rel:hasSourceParty&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasContributorParty</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasContributorParty</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hascontributorparty</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Party which has a contributorial relationship to this Object</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasContributorParty will be the identifier of an instance of the  Party class</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Multiple</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasContributorParty rdf:resource="info:fedora/qsr-party:5"&gt;&lt;/qsr_rel:hasContributorParty&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">object_creation_date</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#object_creation_date</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>object_creation_date</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Date the object was originally created (i.e. not the ingest date)</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">object_remote_identifier</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#object_remote_identifier</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>object_remote_identifier</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Used to store the identifier of the object as specified by the remote system. Used when providing external content via QSR.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">object_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#object_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>object_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:title. The title of the digital object</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:title&gt;Photograph of Cashel Street, Pic01234&lt;/dc:title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2"></td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td></td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:description. An account of the resource</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:description&gt;A colour image of the damage in Cashall Street&lt;/dc:description&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">object_thumbnail</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#object_thumbnail</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>object_thumbnail</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>The thumbnail used to represent the collection.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>If not supplied, display wil default to the first available part thumbnail.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:object_thumbnail&gt;http://quakestudies.canterbury.ac.nz/object1/thumbnail.jpg&lt;/qsr:object_thumbnail&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasAddress</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasAddress</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hasaddress</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Address to which this Object is related</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasAddress will be the identifier of an instance of the  Address class</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Multiple</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasAddress rdf:resource="info:fedora/qsr-address:2"&gt;&lt;/qsr_rel:hasAddress&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Party<br>#Part<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">loadedInBatch</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#loadedInBatch</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>loadedinbatch</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#ContentPartner<br>#Collection<br>#Position<br>#Person<br>#Party<br>#Category<br>#Part<br>#Format<br>#Object<br>#License<br>#DateTime<br>#Event<br>#Address<br>#Availability<br>#Audience<br>#Role<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasCategory</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasCategory</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hascategory</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Category to which this Object is related</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasCategory will be the identifier of an instance of the  Category class</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasCategory rdf:resource="info:fedora/qsr-category:1"&gt;&lt;/qsr_rel:hasCategory&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Category<br>#Part<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasCreatorParty</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasCreatorParty</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hascreatorparty</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Party which has a creatorial relationship to this Object</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasCreatorParty will be the identifier of an instance of the  Party class. It is not compulsory as often the creator of an Object may be unknown.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Multiple</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasCreatorParty rdf:resource="info:fedora/qsr-party:5"&gt;&lt;/qsr_rel:hasCreatorParty&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Part<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">isCollectedInto</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#isCollectedInto</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>iscollectedinto</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Collection which can be regarded collecting this Object</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of isCollectedInto will be the identifier of an instance of the Collection class. Each Object will be related to one and only one Collection.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Multiple</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:isCollectedInto rdf:resource="info:fedora/qsr-collection:3"&gt;&lt;/qsr_rel:isCollectedInto&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Collection<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasRelationshipToEvent</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasRelationshipToEvent</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hasrelationshiptoevent</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Event with which this Object has some relationship</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasRelationshipToEvent will be the identifier of an instance of the Event class.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Multiple</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasRelationshipToEvent rdf:resource="info:fedora/qsr-event:4"&gt;&lt;/qsr_rel:hasRelationshipToEvent&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Part<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">seo_text</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#seo_text</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>seo_text</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Allows capturing or specifying text regarding the digital object which is useful for evidence to search engines such as Google, allowing them to allow more accurate discoverability of the resource</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>As the contents of many repositories often are part of the deep web (i.e. not as visible to search engines as we would like), this element allows us to make available text which is either a native part of the digital object, or is created to describe the digital object, such that search engines are able to expose such digital objects and make them accessible to a wide audience.
+It is expected that this element would only be exposed to search engines where a given digital object has public availability</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:seo_text&gt;Manuscripts from the public collection of the Macmillan Brown Library&lt;/qsr:seo_text&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Category<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">version</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#version</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>version</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates the version of the content</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Freetext (i.e. not backed by any vocabulary) used to indicate the verison of the content.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:version&gt;1.02&lt;/qsr:version&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Part<br>#Collection<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">tags</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#tags</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>tags</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>A comma-delimited list indicating the tags that apply to this content.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Tags are stored as free-text, but the intention is to make them available via search.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:tags&gt;earthquake, aftershock, damage&lt;/qsr:tags&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Part<br>#Collection<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">creator_credit</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#creator_credit</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>creator_credit</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>The creator credit associated with the digital object, typically used to accompany the digital object when presented to the final user (e.g. as a photo credit)</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Creator credit is required because often there is particular information that needs to be presented with a digital object which is difficult to synthesise from other information (such as the creator name)</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:creator_credit&gt;Used by permission of the estate of Ngaire Best&lt;/qsr:creator_credit&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Part<br>#Object<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">weight</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#weight</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>weight</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates either weighting or ordinal position</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Weight can be used to either indicate relative weightings within a group of class instances (e.g. objects within a collection)  in which case multiple instances can share the same weighting.
+Alternatively weighting can be used to indicate ordinal position (e.g. parts within an object), in which case all instances within the group should have a unique value for this property.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Part<br>#Object<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="class_name">
+<h2 class="trigger"><a href="#">Availability</a></h2>
+<div class="toggle_container">
+<ul>
+<li>An instance of the Availability class</li>
+<li>Represents the Availability class, and as such is a container element. Availability can be thought of a given period of time that a digital object may be made available to proscribed audiences, and the associated licensing conditions.</li>
+</ul>
+<table class="element">
+<tr class="element_name"><td colspan="2">isAvailableTo</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#isAvailableTo</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>isavailableto</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates the instances of the Audience class to which the availability is made</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of isAvailabileTo will be the identifier of an instance of the Audience class</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:isAvailableTo rdf:resource="info:fedora/qsr-audience:5"&gt;&lt;/qsr_rel:isAvailableTo&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">availability_description</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#availability_description</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>availability_description</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:description</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">availability_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#availability_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>availability_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:title. A human-readable descriptive name identifying the availability criteria for given digital objects or parts thereof</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Availability can be thought of a given period of time that a digital object may be made available to proscribed audiences, and the associated licensing conditions</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:title&gt;CC-BY-ND, but embargoed until 1 January 2018&lt;/dc:title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasEndDateTime</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasEndDateTime</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hasenddatetime</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates the end date time</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasEndDateTime will be the identifier of an instance of the  DateTime class</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasCreatorParty rdf:resource="info:fedora/qsr-party:5"&gt;&lt;/qsr_rel:hasCreatorParty&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Event<br>#Availability<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasStartDateTime</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasStartDateTime</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hasstartdatetime</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates the start date time</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasStartDateTime will be the identifier of an instance of the DateTime class</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasStartDateTime rdf:resource="info:fedora/qsr-datetime:5"&gt;&lt;/qsr_rel:hasStartDateTime&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Event<br>#Availability<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">loadedInBatch</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#loadedInBatch</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>loadedinbatch</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#ContentPartner<br>#Collection<br>#Position<br>#Person<br>#Party<br>#Category<br>#Part<br>#Format<br>#Object<br>#License<br>#DateTime<br>#Event<br>#Address<br>#Availability<br>#Audience<br>#Role<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="class_name">
+<h2 class="trigger"><a href="#">Coffee</a></h2>
+<div class="toggle_container"><ul>
+<li>
+<li>&lt;p style="margin-top: 0"&gt;
+      Once more, a delicious instance of Coffee.
+    &lt;/p&gt;</li>
+</ul></div>
+</div>
+<div class="class_name">
+<h2 class="trigger"><a href="#">Category</a></h2>
+<div class="toggle_container">
+<ul>
+<li>An instance of the Category class</li>
+<li>Represents the Category class, and as such is a container element. Note that, because Category is a reflexive class, it is actually a taxonomy rather than a vocabulary, and as such can represent quite rich interrelationships between a given digital object and other digital objects described using the same taxonomy (e.g. siblings, ancestors, descendents).</li>
+</ul>
+<table class="element">
+<tr class="element_name"><td colspan="2">category_description</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#category_description</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>category_description</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:description</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">category_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#category_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>category_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:title. A human-readable descriptive name which indicates a categorisation of a given digital object</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Category can be used to indicate a categorisation of a given digital object for use with other systems (for example, using a value from the DNZ.category vocabulary, such as “Audio”) or for internal QSR purposes (for example, “University-related”).</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:title&gt;Manuscript&lt;/dc:title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">category_domain</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#category_domain</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>category_domain</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Effectively determines the namespace to which the category belongs.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>This element allows the use of the same category_name values across different domains, as well as allowing us to ensure that we do capture category information for particular domains</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:category_domain&gt;DigitalNZ&lt;/qsr:category_domain&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">loadedInBatch</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#loadedInBatch</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>loadedinbatch</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#ContentPartner<br>#Collection<br>#Position<br>#Person<br>#Party<br>#Category<br>#Part<br>#Format<br>#Object<br>#License<br>#DateTime<br>#Event<br>#Address<br>#Availability<br>#Audience<br>#Role<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasCategory</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasCategory</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hascategory</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Category to which this Object is related</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasCategory will be the identifier of an instance of the  Category class</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasCategory rdf:resource="info:fedora/qsr-category:1"&gt;&lt;/qsr_rel:hasCategory&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Category<br>#Part<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">seo_text</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#seo_text</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>seo_text</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Allows capturing or specifying text regarding the digital object which is useful for evidence to search engines such as Google, allowing them to allow more accurate discoverability of the resource</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>As the contents of many repositories often are part of the deep web (i.e. not as visible to search engines as we would like), this element allows us to make available text which is either a native part of the digital object, or is created to describe the digital object, such that search engines are able to expose such digital objects and make them accessible to a wide audience.
+It is expected that this element would only be exposed to search engines where a given digital object has public availability</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:seo_text&gt;Manuscripts from the public collection of the Macmillan Brown Library&lt;/qsr:seo_text&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Category<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="class_name">
+<h2 class="trigger"><a href="#">Event</a></h2>
+<div class="toggle_container">
+<ul>
+<li>An instance of the Event class</li>
+<li>Represents the Event class, and as such is a container element.</li>
+</ul>
+<table class="element">
+<tr class="element_name"><td colspan="2">event_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#event_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>event_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:title. Provides the human-readable descriptive name of an event</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>An event can be discrete (e.g. a birthday) or ongoing (an epoch) and can span any period of time</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:title&gt;Earthquake of Febrauary 22, 2011&lt;/dc:title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">event_description</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#event_description</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>event_description</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:description</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">event_type</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#event_type</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>event_type</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Denotes whether the event is of the artefact creation or the event depicted by the artefact</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:event_type&gt;creation&lt;/qsr:event_type&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasEndDateTime</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasEndDateTime</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hasenddatetime</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates the end date time</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasEndDateTime will be the identifier of an instance of the  DateTime class</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasCreatorParty rdf:resource="info:fedora/qsr-party:5"&gt;&lt;/qsr_rel:hasCreatorParty&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Event<br>#Availability<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasStartDateTime</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasStartDateTime</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hasstartdatetime</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates the start date time</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasStartDateTime will be the identifier of an instance of the DateTime class</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasStartDateTime rdf:resource="info:fedora/qsr-datetime:5"&gt;&lt;/qsr_rel:hasStartDateTime&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Event<br>#Availability<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">loadedInBatch</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#loadedInBatch</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>loadedinbatch</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#ContentPartner<br>#Collection<br>#Position<br>#Person<br>#Party<br>#Category<br>#Part<br>#Format<br>#Object<br>#License<br>#DateTime<br>#Event<br>#Address<br>#Availability<br>#Audience<br>#Role<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="class_name">
+<h2 class="trigger"><a href="#">Person</a></h2>
+<div class="toggle_container">
+<ul>
+<li>An instance of the Person class</li>
+<li>Represents the Person class, and as such is a container element.</li>
+</ul>
+<table class="element">
+<tr class="element_name"><td colspan="2">isTypeOfParty</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#isTypeOfParty</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>istypeofparty</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates which Party the Person is related to.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>A Party may either describe a person or an organisation; in the case of being related to a person Party, Person allows for personal details to be collected. In the case of being related to an organisation Party, Person allows description of a person in the organisation.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:isTypeOfParty rdf:resource="info:fedora/qsr-party:4"&gt;&lt;/qsr_rel:isTypeOfParty&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">person_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#person_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>person_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:title</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">forenames</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#forenames</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>forenames</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Personal forenames</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>All personal forenames for a given Person, in as much detail as is available.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:forenames&gt;James Robert&lt;/qsr:forenames&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">surname</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#surname</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>surname</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Personal surname</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The personal surname for a given Person, in as much detail as is available.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:surname&gt;Robertson&lt;/qsr:surname&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">person_description</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#person_description</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>person_description</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:description</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">person_display_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#person_display_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>person_display_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>The entire name for the Person.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Used for display purposes, and useful for providing the correct usage non-European names which don’t follow the forename - surname convention (e.g. Te Whiti O Rongamai)</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:person_display_title&gt;Sir James Edward Robertson&lt;/qsr:person_display_title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">terms_of_address</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#terms_of_address</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>terms_of_address</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>All known typically used terms of address for a given Person.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>May include formal titles (e.g. Knight Commander of the British Empire), less formal title (e.g. Sir) or conventional usage (e.g. Miss)</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:terms_of_address&gt;Doctor&lt;/qsr:terms_of_address&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">loadedInBatch</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#loadedInBatch</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>loadedinbatch</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#ContentPartner<br>#Collection<br>#Position<br>#Person<br>#Party<br>#Category<br>#Part<br>#Format<br>#Object<br>#License<br>#DateTime<br>#Event<br>#Address<br>#Availability<br>#Audience<br>#Role<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="class_name">
+<h2 class="trigger"><a href="#">Batch</a></h2>
+<div class="toggle_container">
+<ul>
+<li>
+<li>
+</ul>
+<table class="element">
+<tr class="element_name"><td colspan="2">batch_description</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#batch_description</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>batch_description</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">batch_display_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#batch_display_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>batch_display_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">batch_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#batch_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>batch_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="class_name">
+<h2 class="trigger"><a href="#">Party</a></h2>
+<div class="toggle_container">
+<ul>
+<li>An instance of the Party class, and as such is a container element.</li>
+<li>Represents the Party class and used to represent an agent (Person or Organisation) which has a defined relationship with the Object.</li>
+</ul>
+<table class="element">
+<tr class="element_name"><td colspan="2">party_email</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#party_email</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>party_email</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>The email address of the Party.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:party_email&gt;john.smith@gmail.com&lt;/qsr:party_email&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">party_social_username</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#party_social_username</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>party_social_username</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>The username of the Party for a given social media service, as indicated by party_social_type.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">party_social_type</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#party_social_type</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>party_social_type</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>The type of social media service for a Party, relating to the value in party_social_username.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:party_social_type&gt;facebook&lt;/qsr:party_social_type&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">party_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#party_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>party_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:title. The human-readable descriptive name of the Party.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Typically this will be derived from Person (terms_of_address + forenames + surname) or from Organisation (organisation_name). It may regularised in a form that is suitable for lookups or search.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:title&gt;Smith, John Edward, Sir&lt;/dc:title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">party_display_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#party_display_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>party_display_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>The human-readable descriptive name of the Party for display purposes.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Typically this will be derived from Person (terms_of_address + forenames + surname) or from Organisation (organisation_name).</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:party_display_title&gt;Sir John Edward Smith&lt;/qsr:party_display_title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">party_phone_number</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#party_phone_number</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>party_phone_number</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">party_foreign_uri</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#party_foreign_uri</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>party_foreign_uri</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>If a party relates to an entry in an external authority control system, this field will indicate the uri identifying that system.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:party_foreign_uri&gt;http://authority.org.nz&lt;qsr:party_foreign_uri&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">isMemberOfContentPartner</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#isMemberOfContentPartner</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>ismemberofcontentpartner</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class ContentPartner to which this Party is related</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of isMemberOfContentPartner will be the identifier of an instance of the ContentPartner class</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:isMembrOfContentPartner rdf:resource="info:fedora/qsr-contentpartner:3"&gt;&lt;/qsr_rel:isMemberOfContentPartner&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">party_url</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#party_url</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>party_url</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>The HTTP URL associated with the Party.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:party_url&gt;http:// christchurchcitylibraries.com/&lt;/qsr:party_url&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">isMemberOfRole</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#isMemberOfRole</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>ismemberofrole</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Role for which this Party can be regarded occupying a defined role.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of isMemberOfRole will be the identifier of an instance of the  Role class</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:isMemberOfRole rdf:resource="info:fedora/qsr-role:3"&gt;&lt;/qsr_rel:isMemberOfRole&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">party_foreign_identifier</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#party_foreign_identifier</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>party_foreign_identifier</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>If a party relates to an entry in an external authority control system, this field will indicate the identifer used in that system.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:party_foreign_identifier&gt;4586904&lt;/qsr:party_foreign_identifier&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">party_description</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>FunctionalProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#party_description</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>party_description</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:description</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:description&gt;Sir John Edwards&lt;/dc:description&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">hasAddress</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#hasAddress</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>hasaddress</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Indicates an instance of the class Address to which this Object is related</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>The value of hasAddress will be the identifier of an instance of the  Address class</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Multiple</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr_rel:hasAddress rdf:resource="info:fedora/qsr-address:2"&gt;&lt;/qsr_rel:hasAddress&gt;</pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#Object<br>#Party<br>#Part<br>
+</td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">loadedInBatch</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#loadedInBatch</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>loadedinbatch</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#ContentPartner<br>#Collection<br>#Position<br>#Person<br>#Party<br>#Category<br>#Part<br>#Format<br>#Object<br>#License<br>#DateTime<br>#Event<br>#Address<br>#Availability<br>#Audience<br>#Role<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="class_name">
+<h2 class="trigger"><a href="#">License</a></h2>
+<div class="toggle_container">
+<ul>
+<li>An instance of the License class</li>
+<li>Represents the License class, and as such is a container element.</li>
+</ul>
+<table class="element">
+<tr class="element_name"><td colspan="2">license_description</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#license_description</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>license_description</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:description. The human-readable description of the license</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Will be displayed alongside those objects to which it applies, so should be both meaningful and succinct</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:description&gt;You are free to Share (to copy, distribute and transmit the work); to Remix (to adapt the work) under the following conditions: attribution — You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work); noncommercial — you may not use this work for commercial purposes.&lt;/dc:description&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">license_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#license_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>license_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:title. The formal name of the license</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>License can either be a formally-defined license (such as Creative Commons) or an ad-hoc license</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:title&gt;Attribution-NonCommercial 3.0 New Zealand (CC BY-NC 3.0)&lt;/dc:title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">rights_url</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#rights_url</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>rights_url</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>The URI which is associated with the license</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Should be a canonical URI</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:rights_url&gt;http://creativecommons.org/licenses/by-nc/3.0/nz/&lt;/qsr:rights_url&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">license_provenance</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#license_provenance</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>license_provenance</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>The general provenance of the license</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Used to provide license provenance information to DigitalNZ, using dnz.copyright vocabulary (All rights reserved, Some rights reserved, No known restrictions, None)</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:license_provenance&gt;All rights reserved&lt;/qsr:license_provenance &gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">license_document</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#license_document</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>license_document</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Used to contain the digital representation (scanned or born-digital) of the license document.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">loadedInBatch</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#loadedInBatch</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>loadedinbatch</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#ContentPartner<br>#Collection<br>#Position<br>#Person<br>#Party<br>#Category<br>#Part<br>#Format<br>#Object<br>#License<br>#DateTime<br>#Event<br>#Address<br>#Availability<br>#Audience<br>#Role<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="class_name">
+<h2 class="trigger"><a href="#">Position</a></h2>
+<div class="toggle_container">
+<ul>
+<li>An instance of the Position class</li>
+<li>Represents the Position class, and as such is a container element. Used to provide a formal definition of a location using definitive geographical coordinates, which are related to what may be a more informal Address. Note that a given Address may have multiple Positions, in that multiple coordinate points may be considered as being located at a given Address.</li>
+</ul>
+<table class="element">
+<tr class="element_name"><td colspan="2">position_description</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#position_description</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>position_description</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:description</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:description&gt;The north-east corner of the Macmillan Brown Library&lt;/dc:description&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">location</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#location</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>location</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Indicates the location of the postion, which could be in relation to an address (e.g. "Across the road from the northern facade of the Odeon building, 121 Tuam Street") or providing further granularity for an associated address.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:location&gt;Across the road from the northern facade of the Odeon building, 121 Tuam Street&lt;/qsr:location&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">longitude</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#longitude</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>longitude</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Longitude, expressed as a decimal measured in degrees</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Typically, six decimal places are required, and maybe positive or negative.</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:longitude&gt;-77.008889&lt;/qsr:longitude&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">latitude</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#latitude</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>latitude</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Latitude, expressed as a decimal measured in degrees</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>Typically, six decimal places are required</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:latitude&gt;38.889722&lt;/qsr:latitude&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">position_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#position_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>position_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:title. A human-readable descriptive name for the position</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:title&gt;North-eastern corner Macmillan Brown Library&lt;/dc:title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">loadedInBatch</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#loadedInBatch</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>loadedinbatch</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#ContentPartner<br>#Collection<br>#Position<br>#Person<br>#Party<br>#Category<br>#Part<br>#Format<br>#Object<br>#License<br>#DateTime<br>#Event<br>#Address<br>#Availability<br>#Audience<br>#Role<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="class_name">
+<h2 class="trigger"><a href="#">ContentPartner</a></h2>
+<div class="toggle_container">
+<ul>
+<li>An instance of the ContentPartner class</li>
+<li>Represents the ContentPartner class, and as such is a container element. Used primarily for compatibility with DigitalNZ</li>
+</ul>
+<table class="element">
+<tr class="element_name"><td colspan="2">content_partner_description</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#content_partner_description</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>content_partner_description</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:description</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">content_partner_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#content_partner_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>content_partner_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Equivalent to dc:title. Provides the human-readable descriptive name of the Content Partner for internal and possibly external use.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>A content partner is a Party (Organisation or Person) contributing collections of content to QSR</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;dc:title&gt;Christchurch City Libraries&lt;/dc:title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">content_partner_display_title</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>DatatypeProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#content_partner_display_title</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>content_partner_display_title</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td>Provides the human-readable descriptive name of the Content Partner for external use.</td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td>A content partner is a Party (Organisation or Person) contributing collections of content to QSR</td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre>&lt;qsr:content_partner_display_title&gt;Christchurch City Libraries: Nga Kete Wananga-o-Otautahi&lt;/qsr:content_partner_display_title&gt;</pre></td>
+</tr>
+</table>
+<table class="element">
+<tr class="element_name"><td colspan="2">loadedInBatch</td></tr>
+<tr>
+<td class="first">Type:</td>
+<td>ObjectProperty</td>
+</tr>
+<tr>
+<td>Namespace:</td>
+<td>qsr</td>
+</tr>
+<tr>
+<td>URI:</td>
+<td>http://quakestudies.canterbury.ac.nz#loadedInBatch</td>
+</tr>
+<tr>
+<td>Label:</td>
+<td>loadedinbatch</td>
+</tr>
+<tr>
+<td>Definition:</td>
+<td></td>
+</tr>
+<tr>
+<td>Notes:</td>
+<td></td>
+</tr>
+<tr>
+<td>Cardinality:</td>
+<td>Functional</td>
+</tr>
+<tr>
+<td>Example:</td>
+<td><pre></pre></td>
+</tr>
+<tr>
+<td>Range (used by)</td>
+<td>#ContentPartner<br>#Collection<br>#Position<br>#Person<br>#Party<br>#Category<br>#Part<br>#Format<br>#Object<br>#License<br>#DateTime<br>#Event<br>#Address<br>#Availability<br>#Audience<br>#Role<br>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<footer><p>This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0 Unported License</a>.</p></footer><script src="js/jquery.js"></script><script type="text/javascript">
+					$(document).ready(function(){            	
+						$("p.trigger").click(function(){
+							 $(".toggle_container").slideToggle("slow");
+							 $(this).toggleClass("active");
+						});
+						$("h2.trigger").click(function(){
+							$(this).toggleClass("active").next().slideToggle("slow");
+						});
+					});
+			</script><script src="js/jquery.js"></script><script src="js/bootstrap-transition.js"></script><script src="js/bootstrap-alert.js"></script><script src="js/bootstrap-modal.js"></script><script src="js/bootstrap-dropdown.js"></script><script src="js/bootstrap-scrollspy.js"></script><script src="js/bootstrap-tab.js"></script><script src="js/bootstrap-tooltip.js"></script><script src="js/bootstrap-popover.js"></script><script src="js/bootstrap-button.js"></script><script src="js/bootstrap-collapse.js"></script><script src="js/bootstrap-carousel.js"></script><script src="js/bootstrap-typeahead.js"></script>
+</body>
+</html>

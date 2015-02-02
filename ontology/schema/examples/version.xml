@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns="http://quakestudies.canterbury.ac.nz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://quakestudies.canterbury.ac.nz ../qsr.xsd" xmlns:dcmi="http://purl.org/dc/dcmitype/">
+  <Version xml:id="version_1">
+    <properties/>
+    <relations>
+      <isVersionOf idref="#object_1"></isVersionOf>
+      <hasStartDateTime idref="#datetime_1"></hasStartDateTime>
+    </relations>
+  </Version>
+</content>

@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Quakestudies Repository: API documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- note that the custom stylesheet overrides some of the CSS in the above stylesheets. -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+
+    <!-- <div class="navbar navbar-fixed-top"> -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Quakestudies Repository: API documentation</a>
+            <ul class="nav">
+              <li class="dropdown"><a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Ontology <b class="caret"></b></a>
+              	<ul class="dropdown-menu">
+									<li><a href="index.html">Ontology documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="introduction.html">Ontology introduction</a></li>
+									<li><a href="../owl/ceismic.owl">OWL-RDF ontology</a></li>
+									<li><a href="ontology.html">Ontology description</a></li>
+									<li><a href="vocabularies.html">Vocabularies</a></li>
+									<li><a href="../owl/ceismic.gif">Ontology diagram</a></li>
+									<li><a href="mappings.html">Mappings</a></li>
+              	</ul>
+              </li>
+              <li class="dropdown"><a href="system.html" class="dropdown-toggle" data-toggle="dropdown">System <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="system.html">System documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="system.html#architecture">Architecture</a></li>
+				          <li><a href="system.html#administration_interfaces">Administration interfaces</a></li>
+				          <li><a href="system.html#authentication">Authentication</a></li>
+				          <li><a href="system.html#authorisation">Authorisation</a></li>
+								</ul>
+							</li>
+              <li class="dropdown"><a href="user.html" class="dropdown-toggle" data-toggle="dropdown">User <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="user.html">User documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="user.html#roles">Roles</a></li>
+									<li><a href="user.html#workflows">Workflows</a></li>
+									<li><a href="user.html#bulk_ingest">Generic bulk ingest</a></li>
+									<li><a href="user.html#fedora_vocab">Fedora Vocabulary</a></li>
+								</ul>
+							</li>
+              <li class="active dropdown"><a href="api.html" class="dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="api.html">API documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="api.html#Introduction">Introduction</a></li>
+									<li><a href="api.html#ResourceIndexSearch">Resource index search</a></li>
+									<li><a href="api.html#RESTAPI">REST API</a></li>
+								</ul>
+							</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit" style="position: relative;">
+      		<div>
+						<img src="assets/eq-info.jpg" width="200"/>
+					</div>
+      		<div style="position: absolute; left: 300px; top: 52px;">
+						<h1>Quakestudies API</h1>
+						<p>Documentation about accessing and querying the Quakestudies repository by third parties. 
+						</p>
+						<!--
+						<p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+						-->
+					</div>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+
+        <div class="span3">
+        <ul>
+          <li>
+            <a href="#Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#ResourceIndexSearch">Resource Index Search</a>
+          </li>
+          <ul>
+            <li>
+              <a href="#ResourceIndexSearch-API">RISearch API</a>
+            </li>
+            <ul>
+              <li>
+                <a href="#ResourceIndexSearch-SyntaxforRequestingTuples">Syntax for Requesting Tuples</a>
+              </li>
+              <li>
+                <a href="#ResourceIndexSearch-SyntaxforRequestingTriples">Syntax for Requesting Triples</a>
+              </li>
+            </ul>
+            <li>
+              <a href="#ResourceIndexSearch-SPO">SPO query language</a>
+            </li>
+          </ul>
+          <li>
+            <a href="#RESTAPI">Fedora API-A and API-M</a>
+          </li>
+          <ul>
+            <li>
+              <a href="#RESTAPI-Introduction">Introduction</a>
+            </li>
+            <li>
+              <a href="#RESTAPI-APIAMethods">
+                <ins>API-A Methods</ins>
+              </a>
+            </li>
+            <ul>
+              <li>
+                <a href="#RESTAPI-findObjects">findObjects</a>
+              </li>
+              <li>
+                <a href="#RESTAPI-getDatastreamDissemination">getDatastreamDissemination</a>
+              </li>
+              <li>
+                <a href="#RESTAPI-getDissemination">getDissemination</a>
+              </li>
+              <li>
+                <a href="#RESTAPI-getObjectHistory">getObjectHistory</a>
+              </li>
+              <li>
+                <a href="#RESTAPI-getObjectProfile">getObjectProfile</a>
+              </li>
+              <li>
+                <a href="#RESTAPI-listDatastreams">listDatastreams</a>
+              </li>
+              <li>
+                <a href="#RESTAPI-listMethods">listMethods</a>
+              </li>
+              <li>
+                <a href="#RESTAPI-resumeFindObjects">resumeFindObjects</a>
+              </li>
+            </ul>
+            <li>
+              <a href="#RESTAPI-APIMMethods">
+                <ins>API-M Methods</ins>
+              </a>
+            </li>
+            <ul>
+              <li>
+                <a href="#RESTAPI-export">export</a>
+              </li>
+              <li>
+                <a href="#RESTAPI-getDatastream">getDatastream</a>
+              </li>
+              <li>
+                <a href="#RESTAPI-getDatastreamHistory">getDatastreamHistory</a>
+              </li>
+              <li>
+                <a href="#RESTAPI-getObjectXML">getObjectXML</a>
+              </li>
+              <li>
+                <a href="#RESTAPI-getRelationships">getRelationships</a>
+              </li>
+            </ul>
+          </ul>
+          </ul>
+        </div>
+
+        <div class="span8">
+					<h1><a name="Introduction"></a>Introduction</h1>
+					<p>This document outlines the REST API for use in communicating with the Quake Studies Repository. As the Quake Studies Repository is implemented as a Fedora Commons instance, the API is largely based on the REST API-A and API-M methods and the RISearch service API exposed by Fedora, and <a href="https://wiki.duraspace.org/display/FEDORA34/REST+API">described in the documentation for this version of Fedora (3.4.2)</a>.</p>
+	
+					<h1><a name="ResourceIndexSearch"></a>Resource Index Search</h1>
+					<p>Fedora's <a href="https://wiki.duraspace.org/display/FEDORA34/Resource+Index+Search">Resource Index Search</a> service is a web service that exposes the relationships described in the Quake Studies Repository data model, allowing relationships between the QSR classes to be queried and navigated.</p>
+	
+					<h2><a name="ResourceIndexSearch-API"></a>RISearch API</h2>
+					<p>The RISearch service can be programmatically accessed via HTTP GET or POST. To avoid character encoding issues, POST should always be used when the query is passed in by value and contains non-ASCII characters.</p>
+					<p>As with the user interface, it can be invoked to retrieve tuples or triples. The syntax is described below.</p>
+	
+					<p>Note:</p>
+	
+					<ul>
+						<li>Square brackets ( "[" and "]" ) indicate that the parameter is optional.</li>
+						<li>As with all HTTP parameters, unsafe URI characters should be URI-escaped. For readability purposes, URI escaping is not shown below.</li>
+						<li>The <em>query</em> and <em>template</em> parameters optionally take the value by <em>reference</em> &#8211; that is, a URL to a query or template can be given instead of the actual text.</li>
+						<li>The <em>flush</em> parameter tells the resource index to ensure that any recently-added/modified/deleted triples are flushed to the triplestore before executing the query. This option can be desirable in certain scenarios, but for performance reasons, should be used sparingly when a process is making many API-M calls to Fedora in a short period of time: We have found that Mulgara generally achieves a much better overall update rate with large batches of triples.</li>
+					</ul>
+
+					<h3><a name="ResourceIndexSearch-SyntaxforRequestingTuples"></a>Syntax for Requesting Tuples <a name="ResourceIndexSearch-apptuples"></a></h3>
+	
+					<div class="code panel">
+							<pre>http://localhost:8080/fedora/risearch?type=tuples
+				 &amp;flush=[*true* (default is false)]
+				 &amp;lang=*itql|sparql*
+				 &amp;format=*CSV|Simple|Sparql|TSV*
+				 &amp;limit=[*1* (default is no limit)]
+				 &amp;distinct=[*on* (default is off)]
+				 &amp;stream=[*on* (default is off)]
+				 &amp;query=*QUERY_TEXT_OR_URL*</pre>
+					</div>
+
+					<h3><a name="ResourceIndexSearch-SyntaxforRequestingTriples"></a>Syntax for Requesting Triples <a name="ResourceIndexSearch-apptriples"></a></h3>
+	
+					<div class="code panel">
+							<pre>http://localhost:8080/fedora/risearch?type=triples
+				 &amp;flush=[*true* (default is false)]
+				 &amp;lang=*spo|itql|sparql*
+				 &amp;format=*N-Triples|Notation 3|RDF/XML|Turtle*
+				 &amp;limit=[*1* or more (default is no limit)]
+				 &amp;distinct=[*on* (default is off)]
+				 &amp;stream=[*on* (default is off)]
+				 &amp;query=*QUERY_TEXT_OR_URL*
+				 &amp;template=[*TEMPLATE_TEXT_OR_URL* (if applicable)></pre>
+					</div>
+
+					<h2><a name="ResourceIndexSearch-SPO"></a>SPO query language</h2>
+					<p>Although Fedora allows use of a variety of query languages to interrogate the Resource Index, we will describe the simplest, SPO, here as this is generally adequate for most simple queries.</p>
+					<p>SPO is a very simple RDF query language, where queries consist of a specific subject (or an asterisk, indicating "any"), a specific predicate (or an asterisk), and a specific object (or an asterisk). The easiest way to learn SPO is by example:</p>
+	
+					<h3>Get all triples in the repository:</h3>
+					<div class="code panel">
+							<pre>* * *</pre>
+							<p>URLEncoded as a GET request, this looks like:</p>
+							<pre>http://localhost:8080/fedora/risearch?query=*+*+*
+				 &amp;lang=spo
+				 &amp;type=triples
+				 &amp;format=N-Triples
+				 &amp;limit=1000</pre>
+					</div>
+	
+					<h3>Get all triples where the predicate is http://quakestudies.canterbury.ac.nz#hasClassType and the object is info:fedora/qsr:part</h3>
+					<div class="code panel">
+							<pre>* &lt;http://quakestudies.canterbury.ac.nz#hasClassType&gt; &lt;info:fedora/qsr:part&gt;</pre>
+							<p>URLEncoded as a GET request, this looks like:</p>
+							<pre>http://localhost:8080/fedora/risearch?query=*+%3Chttp%3A%2F%2Fquakestudies.canterbury.ac.nz%23hasClassType%3E+%3Cinfo%3Afedora%2Fqsr%3Apart%3E
+				 &amp;lang=spo
+				 &amp;type=triples
+				 &amp;format=N-Triples
+				 &amp;limit=10</pre>
+					</div>
+	
+					<p>Although we've used GET requests in the above examples for the purpose of illustration, typically you would most likely use POST requests.</p>
+
+	        <h1><a name="RESTAPI"></a>Fedora API-A and API-M</h1>
+
+  	      <h2><a name="RESTAPI-Introduction"></a>Introduction</h2>
+
+					<p>For examples of how to use the REST API programmatically, please refer to the <a href="https://github.com/fcrepo/fcrepo/blob/master/fcrepo-integrationtest/fcrepo-integrationtest-core/src/main/java/org/fcrepo/test/api/TestRESTAPI.java" class="external-link" rel="nofollow">TestRESTAPI test class</a>.</p>
+
+					<div class="panelMacro">
+						<table class="infoMacro">
+							<tbody>
+								<tr>
+									<td valign="top"><img src="./assets/information.gif" width="16" height="16" align="absmiddle" alt="" border="0"></td>
+									<td>
+										<b>2xx Responses only please</b>
+										<br>The HTTP Response portion of each method description listed below indicates the response on success. Unsuccessful calls will produce non-200 response codes appropriate to the error case. If, however, your client software has difficulty processing non-200 responses (such as is the case with Adobe's Flash Player) adding the query parameter 'flash=true' to any method will ensure that all responses are in the 200 range. In the event of an error, the response code will be set to 200 and the response body will include the error message followed by "::ERROR".
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="panelMacro">
+						<table class="infoMacro">
+							<tbody>
+								<tr>
+									<td valign="top"><img src="./assets/information.gif" width="16" height="16" align="absmiddle" alt="" border="0"></td>
+									<td>
+										<b>POST Replacement</b>
+										<br>If the client with which you are working does not support use of the PUT and/or DELETE HTTP methods but does allow you to set headers on the HTTP request, you can use POST replacement to make PUT and DELETE calls. To do this, simply set the X-HTTP-Method-Override request header to the correct method value (PUT or DELETE) and perform a POST request. Your request will be handled by the REST API as if it were a PUT or DELETE.
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div class="panelMacro">
+						<table class="infoMacro">
+							<tbody>
+								<tr>
+									<td valign="top"><img src="./assets/information.gif" width="16" height="16" align="absmiddle" alt="" border="0"></td>
+									<td>
+										<b>URL-Encoding</b>
+										<br>The REST API requires that parameters - including path parameters - are URL-encoded.  Particularly this is important if you have any PIDs that use <a href="https://wiki.duraspace.org/display/FEDORA34/Fedora+Identifiers" title="Fedora Identifiers">escaped-octets</a> in the PID name.  In this case the "%" character should be URL-encoded as "%25", eg a PID "changeme:1234%2F56" should be URL-encoded as "changeme:1234%252F56".  The ":" PID namespace separator character does not require URL-encoding as it has no special meaning when used in the path component of HTTP URIs; however some software library URL-encoding methods will URL-encode this to %3A - that's not a problem, both ":" and "%3A" will be accepted by the REST API.
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<h2>
+						<a name="RESTAPI-APIAMethods"></a>
+						<ins>API-A Methods</ins>
+					</h2>
+
+					<h3><a name="RESTAPI-findObjects"></a>findObjects</h3>
+
+					<div class="panel">
+						<p><b>URL Syntax</b></p>
+
+						<p>/objects ? [terms | query] [maxResults] [resultFormat] [pid] [label] [state] [ownerId] [cDate] [mDate] [dcmDate] [title] [creator] [subject] [description] [publisher] [contributor] [date] [type] [format] [identifier] [source] [language] [relation] [coverage] [rights]</p>
+
+						<p><b>HTTP Method</b></p>
+
+						<p>GET</p>
+
+						<p><b>HTTP Response</b></p>
+
+						<p>200</p>
+
+						<p><b>Parameters</b></p>
+
+						<div class="table-wrap">
+							<table class="methodTable">
+								<tbody>
+									<tr>
+										<th class="methodTh">
+											<b>Name</b>
+										</th>
+										<th class="methodTh">
+											<b>Description</b>
+										</th>
+										<th class="methodTh">
+											<b>Default</b>
+										</th>
+										<th class="methodTh">
+											<b>Options</b>
+										</th>
+									</tr>
+									<tr>
+										<td class="methodTd"> terms </td>
+										<td class="methodTd"> a phrase represented as a sequence of characters (including the ? and * wildcards) for the search. If this sequence is found in any of the fields for an object, the object is considered a match. Do NOT use this parameter in combination with the "query" parameter </td>
+										<td class="methodTd">&nbsp;</td>
+										<td class="methodTd">&nbsp;</td>
+									</tr>
+									<tr>
+										<td class="methodTd"> query </td>
+										<td class="methodTd"> a sequence of space-separated conditions. A condition consists of a metadata element name followed directly by an operator, followed directly by a value. Valid element names are (pid, label, state, ownerId, cDate, mDate, dcmDate, title, creator, subject, description, publisher, contributor, date, type, format, identifier, source, language, relation, coverage, rights). Valid operators are: contains (<sub>), equals (=), greater than (&gt;), less than (&lt;), greater than or equals (&gt;=), less than or equals (&lt;=). The contains (</sub>) operator may be used in combination with the ? and * wildcards to query for simple string patterns. Space-separators should be encoded in the URL as %20. Operators must be encoded when used in the URL syntax as follows: the (=) operator must be encoded as %3D, the (&gt;) operator as %3E, the (&lt;) operator as %3C, the (&gt;=) operator as %3E%3D, the (&lt;=) operator as %3C%3D, and the (~) operator as %7E. Values may be any string. If the string contains a space, the value should begin and end with a single quote character ('). If all conditions are met for an object, the object is considered a match. Do NOT use this parameter in combination with the "terms" parameter </td>
+										<td class="methodTd">&nbsp;</td>
+										<td class="methodTd">&nbsp;</td>
+									</tr>
+									<tr>
+										<td class="methodTd"> maxResults </td>
+										<td class="methodTd"> the maximum number of results that the server should provide at once. If this is unspecified, the server will default to a small value </td>
+										<td class="methodTd"> 25 </td>
+										<td class="methodTd">&nbsp;</td>
+									</tr>
+									<tr>
+										<td class="methodTd"> resultFormat </td>
+										<td class="methodTd"> the preferred output format </td>
+										<td class="methodTd"> html </td>
+										<td class="methodTd"> xml, html </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> pid </td>
+										<td class="methodTd"> if true, the Fedora persistent identifier (PID) element of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> label </td>
+										<td class="methodTd"> if true, the Fedora object label element of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> state </td>
+										<td class="methodTd"> if true, the Fedora object state element of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> ownerId </td>
+										<td class="methodTd"> if true, each matching objects' owner id will be included in the responsefalsetrue, false </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> cDate </td>
+										<td class="methodTd"> if true, the Fedora create date element of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> mDate </td>
+										<td class="methodTd"> if true, the Fedora modified date of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> dcmDate </td>
+										<td class="methodTd"> if true, the Dublin Core modified date element(s) of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> title </td>
+										<td class="methodTd"> if true, the Dublin Core title element(s) of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> creator </td>
+										<td class="methodTd"> if true, the Dublin Core creator element(s) of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> subject </td>
+										<td class="methodTd"> if true, the Dublin Core subject element(s) of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> description </td>
+										<td class="methodTd"> if true, the Dublin Core description element(s) of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> publisher </td>
+										<td class="methodTd"> if true, the Dublin Core publisher element(s) of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> contributor </td>
+										<td class="methodTd"> if true, the Dublin Core contributor element(s) of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> date </td>
+										<td class="methodTd"> if true, the Dublin Core date element(s) of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> type </td>
+										<td class="methodTd"> if true, the Dublin Core type element(s) of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> format </td>
+										<td class="methodTd"> if true, the Dublin Core format element(s) of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> identifier </td>
+										<td class="methodTd"> if true, the Dublin Core identifier element(s) of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> source </td>
+										<td class="methodTd"> if true, the Dublin Core source element(s) of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> language </td>
+										<td class="methodTd"> if true, the Dublin Core language element(s) of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> relation </td>
+										<td class="methodTd"> if true, the Dublin Core relation element(s) of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> coverage </td>
+										<td class="methodTd"> if true, the Dublin Core coverage element(s) of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> rights </td>
+										<td class="methodTd"> if true, the Dublin Core rights element(s) of matching objects will be included in the response </td>
+										<td class="methodTd"> false </td>
+										<td class="methodTd"> true, false </td>
+									</tr>
+								</tbody>
+							</table>
+							</div>
+
+							<p>
+								<b>Examples</b>
+							</p>
+
+							<p>/objects?terms=demo&amp;pid=true&amp;subject=true&amp;label=true&amp;resultFormat=xml</p>
+
+							<p>/objects?query=title%7Erome%20creator%7Estaples&amp;pid=true&amp;title=true&amp;creator=true</p>
+
+							<p>/objects?query=pid%7E*1&amp;maxResults=50&amp;format=true&amp;pid=true&amp;title=true</p>
+					</div>
+
+					<h3><a name="RESTAPI-getDatastreamDissemination"></a>getDatastreamDissemination</h3>
+
+					<div class="panel">
+						<p>
+							<b>URL Syntax</b>
+						</p>
+	
+						<p>/objects/{pid}/datastreams/{dsID}/content ? [asOfDateTime] [download]</p>
+	
+						<p>
+							<b>HTTP Method</b>
+						</p>
+	
+						<p>GET</p>
+	
+						<p>
+							<b>HTTP Response</b>
+						</p>
+	
+						<p>200</p>
+	
+						<p>
+							<b>Parameters</b>
+						</p>
+	
+						<div class="table-wrap">
+							<table class="methodTable">
+								<tbody>
+									<tr>
+										<th class="methodTh">
+											<b>Name</b>
+										</th>
+										<th class="methodTh">
+											<b>Description</b>
+										</th>
+										<th class="methodTh">
+											<b>Default</b>
+										</th>
+										<th class="methodTh">
+											<b>Options</b>
+										</th>
+									</tr>
+									<tr>
+										<td class="methodTd"> {pid} </td>
+										<td class="methodTd"> persistent identifier of the digital object </td>
+										<td class="methodTd">&nbsp;</td>
+										<td class="methodTd">&nbsp;</td>
+									</tr>
+									<tr>
+										<td class="methodTd"> {dsID} </td>
+										<td class="methodTd"> datastream identifier </td>
+										<td class="methodTd">&nbsp;</td>
+										<td class="methodTd">&nbsp;</td>
+									</tr>
+									<tr>
+										<td class="methodTd"> asOfDateTime </td>
+										<td class="methodTd"> indicates that the result should be relative to the digital object as it existed at the given date and time </td>
+										<td class="methodTd">&nbsp;</td>
+										<td class="methodTd"> yyyy-MM-dd or yyyy-MM-ddTHH:mm:ssZ </td>
+									</tr>
+									<tr>
+										<td class="methodTd"> download <br class="atl-forced-newline"> </td>
+											<td class="methodTd"> If true,&nbsp; a content-disposition header value "attachment" will be included in the response, prompting the user to save the datastream as a file.&nbsp; A content-disposition header value "inline" will be used otherwise.&nbsp; The filename used in the header is generated by examining in order: RELS-INT for the relationship fedora-model:downloadFilename, the datastream label, and the datastream ID.&nbsp; The file extension (apart from where the filename is specified in RELS-INT) is determined from the MIMETYPE.&nbsp; The order in which these filename sources are searched, and whether or not to generate an extension from the MIMETYPE, is configured in fedora.fcfg.&nbsp; The file used to map between MIMETYPEs and extensions is mime-to-extensions.xml located in the server config directory. <br class="atl-forced-newline"> </td>
+												<td class="methodTd">&nbsp;</td>
+												<td class="methodTd">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+	
+	
+								<p>
+									<b>Examples</b>
+								</p>
+	
+								<p>/objects/demo:29/datastreams/DC/content</p>
+	
+								<p>/objects/demo:29/datastreams/DC/content?asOfDateTime=2008-01-01</p>
+							</div>
+
+							<h3><a name="RESTAPI-getDissemination"></a>getDissemination</h3>
+
+							<div class="panel">
+								<p>
+									<b>URL Syntax</b>
+								</p>
+
+								<p>/objects/{pid}/methods/{sdefPid}/{method} ? [method parameters]</p>
+
+
+								<p>
+									<b>HTTP Method</b>
+								</p>
+
+								<p>GET</p>
+
+								<p>
+									<b>HTTP Response</b>
+								</p>
+
+								<p>200</p>
+
+								<p>
+									<b>Parameters</b>
+								</p>
+
+								<div class="table-wrap">
+									<table class="methodTable">
+										<tbody>
+											<tr>
+												<th class="methodTh">
+													<b>Name</b>
+												</th>
+												<th class="methodTh">
+													<b>Description</b>
+												</th>
+												<th class="methodTh">
+													<b>Default</b>
+												</th>
+												<th class="methodTh">
+													<b>Options</b>
+												</th>
+											</tr>
+											<tr>
+												<td class="methodTd"> {pid} </td>
+												<td class="methodTd"> persistent identifier of the digital object </td>
+												<td class="methodTd">&nbsp;</td>
+												<td class="methodTd">&nbsp;</td>
+											</tr>
+											<tr>
+												<td class="methodTd"> {sdefPid} </td>
+												<td class="methodTd"> persistent identifier of the sDef defining the methods </td>
+												<td class="methodTd">&nbsp;</td>
+												<td class="methodTd">&nbsp;</td>
+											</tr>
+											<tr>
+												<td class="methodTd"> {method} </td>
+												<td class="methodTd"> method to invoke </td>
+												<td class="methodTd">&nbsp;</td>
+												<td class="methodTd">&nbsp;</td>
+											</tr>
+											<tr>
+												<td class="methodTd"> method parameters <br class="atl-forced-newline"> </td>
+													<td class="methodTd"> any parameters required by the method </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd">&nbsp;</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+
+									<p>
+										<b>Examples</b>
+									</p>
+
+									<p>/objects/demo:29/methods/demo:27/resizeImage?width=100</p>
+
+									<p>/objects/demo:SmileyEarring/methods/demo:DualResolution/fullSize</p>
+								</div>
+
+								<h3><a name="RESTAPI-getObjectHistory"></a>getObjectHistory</h3>
+
+								<div class="panel">
+									<p>
+										<b>URL Syntax</b>
+									</p>
+
+									<p>/objects/{pid}/versions ? [format]</p>
+
+									<p>
+										<b>HTTP Method</b>
+									</p>
+
+									<p>GET</p>
+
+									<p>
+										<b>HTTP Response</b>
+									</p>
+
+									<p>200</p>
+
+									<p>
+										<b>Parameters</b>
+									</p>
+
+									<div class="table-wrap">
+										<table class="methodTable">
+											<tbody>
+												<tr>
+													<th class="methodTh">
+														<b>Name</b>
+													</th>
+													<th class="methodTh">
+														<b>Description</b>
+													</th>
+													<th class="methodTh">
+														<b>Default</b>
+													</th>
+													<th class="methodTh">
+														<b>Options</b>
+													</th>
+												</tr>
+												<tr>
+													<td class="methodTd"> {pid} </td>
+													<td class="methodTd"> persistent identifier of the digital object </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd">&nbsp;</td>
+												</tr>
+												<tr>
+													<td class="methodTd"> format </td>
+													<td class="methodTd"> the preferred output format </td>
+													<td class="methodTd"> html </td>
+													<td class="methodTd"> xml, html </td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+
+									<p>
+										<b>Examples</b>
+									</p>
+
+									<p>/objects/demo:29/versions</p>
+
+									<p>/objects/demo:29/versions?format=xml</p>
+								</div>
+
+								<h3><a name="RESTAPI-getObjectProfile"></a>getObjectProfile</h3>
+
+								<div class="panel">
+									<p>
+										<b>URL Syntax</b>
+									</p>
+
+									<p>/objects/{pid} ? [format] [asOfDateTime]</p>
+
+									<p>
+										<b>HTTP Method</b>
+									</p>
+
+									<p>GET</p>
+
+									<p>
+										<b>HTTP Response</b>
+									</p>
+
+									<p>200</p>
+
+									<p>
+										<b>Parameters</b>
+									</p>
+
+									<div class="table-wrap">
+										<table class="methodTable">
+											<tbody>
+												<tr>
+													<th class="methodTh">
+														<b>Name</b>
+													</th>
+													<th class="methodTh">
+														<b>Description</b>
+													</th>
+													<th class="methodTh">
+														<b>Default</b>
+													</th>
+													<th class="methodTh">
+														<b>Options</b>
+													</th>
+												</tr>
+												<tr>
+													<td class="methodTd"> {pid} </td>
+													<td class="methodTd"> persistent identifier of the digital object </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd">&nbsp;</td>
+												</tr>
+												<tr>
+													<td class="methodTd"> format </td>
+													<td class="methodTd"> the preferred output format </td>
+													<td class="methodTd"> html </td>
+													<td class="methodTd"> xml, html </td>
+												</tr>
+												<tr>
+													<td class="methodTd"> asOfDateTime </td>
+													<td class="methodTd"> indicates that the result should be relative to the digital object as it existed on the given date </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd"> yyyy-MM-dd or yyyy-MM-ddTHH:mm:ssZ </td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+
+									<p>
+										<b>Examples</b>
+									</p>
+
+									<p>/objects/demo:29</p>
+
+									<p>/objects/demo:29?format=xml</p>
+
+									<p>/objects/demo:29?asOfDateTime=2008-01-01</p>
+								</div>
+
+								<h3><a name="RESTAPI-listDatastreams"></a>listDatastreams</h3>
+
+								<div class="panel">
+									<p>
+										<b>URL Syntax</b>
+									</p>
+
+									<p>/objects/{pid}/datastreams ? [format] [asOfDateTime]</p>
+
+									<p>
+										<b>HTTP Method</b>
+									</p>
+
+									<p>GET</p>
+
+									<p>
+										<b>HTTP Response</b>
+									</p>
+
+									<p>200</p>
+
+									<p>
+										<b>Parameters</b>
+									</p>
+
+									<div class="table-wrap">
+										<table class="methodTable">
+											<tbody>
+												<tr>
+													<th class="methodTh">
+														<b>Name</b>
+													</th>
+													<th class="methodTh">
+														<b>Description</b>
+													</th>
+													<th class="methodTh">
+														<b>Default</b>
+													</th>
+													<th class="methodTh">
+														<b>Options</b>
+													</th>
+												</tr>
+												<tr>
+													<td class="methodTd"> {pid} </td>
+													<td class="methodTd"> persistent identifier of the digital object </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd">&nbsp;</td>
+												</tr>
+												<tr>
+													<td class="methodTd"> format </td>
+													<td class="methodTd"> the preferred output format </td>
+													<td class="methodTd"> html </td>
+													<td class="methodTd"> xml, html </td>
+												</tr>
+												<tr>
+													<td class="methodTd"> asOfDateTime </td>
+													<td class="methodTd"> indicates that the result should be relative to the digital object as it existed on the given date </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd"> yyyy-MM-dd or yyyy-MM-ddTHH:mm:ssZ </td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+
+									<p>
+										<b>Examples</b>
+									</p>
+
+									<p>/objects/demo:35/datastreams</p>
+
+									<p>/objects/demo:35/datastreams?format=xml&amp;asOfDateTime=2008-01-01T05:15:00Z</p>
+								</div>
+
+								<h3><a name="RESTAPI-listMethods"></a>listMethods</h3>
+
+								<div class="panel">
+									<p>
+										<b>URL Syntax</b>
+									</p>
+
+									<ol>
+										<li>/objects/{pid}/methods ? [format] [asOfDateTime]</li>
+										<li>/objects/{pid}/methods/{sdefPid} ? [format] [asOfDateTime]</li>
+									</ol>
+
+
+									<p>
+										<b>HTTP Method</b>
+									</p>
+
+									<p>GET</p>
+
+									<p>
+										<b>HTTP Response</b>
+									</p>
+
+									<p>200</p>
+
+									<p>
+										<b>Parameters</b>
+									</p>
+
+									<div class="table-wrap">
+										<table class="methodTable">
+											<tbody>
+												<tr>
+													<th class="methodTh">
+														<b>Name</b>
+													</th>
+													<th class="methodTh">
+														<b>Description</b>
+													</th>
+													<th class="methodTh">
+														<b>Default</b>
+													</th>
+													<th class="methodTh">
+														<b>Options</b>
+													</th>
+												</tr>
+												<tr>
+													<td class="methodTd"> {pid} </td>
+													<td class="methodTd"> persistent identifier of the digital object </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd">&nbsp;</td>
+												</tr>
+												<tr>
+													<td class="methodTd"> {sdefPid} </td>
+													<td class="methodTd"> persistent identifier of the SDef defining the methods </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd">&nbsp;</td>
+												</tr>
+												<tr>
+													<td class="methodTd"> format </td>
+													<td class="methodTd"> the preferred output format </td>
+													<td class="methodTd"> html </td>
+													<td class="methodTd"> xml, html </td>
+												</tr>
+												<tr>
+													<td class="methodTd"> asOfDateTime </td>
+													<td class="methodTd"> indicates that the result should be relative to the digital object as it existed on the given date </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd"> yyyy-MM-dd or yyyy-MM-ddTHH:mm:ssZ </td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+
+									<p>
+										<b>Examples</b>
+									</p>
+
+									<p>/objects/demo:29/methods</p>
+
+									<p>/objects/demo:29/methods?format=xml&amp;asOfDateTime=2008-01-01T05:15:00Z</p>
+
+									<p>/objects/demo:29/methods/demo:27</p>
+
+									<p>/objects/demo:29/methods/demo:27?format=xml&amp;asOfDateTime=2008-01-01T05:15:00Z</p>
+								</div>
+
+								<h3><a name="RESTAPI-resumeFindObjects"></a>resumeFindObjects</h3>
+
+								<div class="panel">
+									<p>
+										<b>URL Syntax</b>
+									</p>
+
+									<p>/objects ? [sessionToken] [all findObjects options]</p>
+
+									<p>
+										<b>HTTP Method</b>
+									</p>
+
+									<p>GET</p>
+
+									<p>
+										<b>HTTP Response</b>
+									</p>
+
+									<p>200</p>
+
+									<p>
+										<b>Parameters</b>
+									</p>
+
+									<div class="table-wrap">
+										<table class="methodTable">
+											<tbody>
+												<tr>
+													<th class="methodTh">
+														<b>Name</b>
+													</th>
+													<th class="methodTh">
+														<b>Description</b>
+													</th>
+													<th class="methodTh">
+														<b>Default</b>
+													</th>
+													<th class="methodTh">
+														<b>Options</b>
+													</th>
+												</tr>
+												<tr>
+													<td class="methodTd"> sessionToken </td>
+													<td class="methodTd"> the identifier of the session to which the search results are being returned </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd">&nbsp;</td>
+												</tr>
+												<tr>
+													<td class="methodTd"> all findObjects options </td>
+													<td class="methodTd"> all of the same options are available for resumeFindObjects as for findObjects </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd">&nbsp;</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+
+									<p>
+										<b>Examples</b>
+									</p>
+
+									<p>/objects?terms=*&amp;format=xml&amp;pid=true&amp;subject=true&amp;label=true&amp;sessionToken=xyz\\\\</p>
+								</div>
+
+								<h2>
+									<a name="RESTAPI-APIMMethods"></a>
+									<ins>API-M Methods</ins>
+								</h2>
+
+								<h3><a name="RESTAPI-export"></a>export</h3>
+
+								<div class="panel">
+									<p>
+										<b>URL Syntax</b>
+									</p>
+
+									<p>/objects/{pid}/export ? [format] [context] [encoding]</p>
+
+									<p>
+										<b>HTTP Method</b>
+									</p>
+
+									<p>GET</p>
+
+									<p>
+										<b>HTTP Response</b>
+									</p>
+
+									<p>200</p>
+
+									<p>
+										<b>Parameters</b>
+									</p>
+
+									<div class="table-wrap">
+										<table class="methodTable">
+											<tbody>
+												<tr>
+													<th class="methodTh">
+														<b>Name</b>
+													</th>
+													<th class="methodTh">
+														<b>Description</b>
+													</th>
+													<th class="methodTh">
+														<b>Default</b>
+													</th>
+													<th class="methodTh">
+														<b>Options</b>
+													</th>
+												</tr>
+												<tr>
+													<td class="methodTd"> {pid} </td>
+													<td class="methodTd"> persistent identifier of the digital object </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd">&nbsp;</td>
+												</tr>
+												<tr>
+													<td class="methodTd"> format </td>
+													<td class="methodTd"> the XML format to export </td>
+													<td class="methodTd"> info:fedora/fedora-system:FOXML-1.1 </td>
+													<td class="methodTd"> info:fedora/fedora-system:FOXML-1.1, info:fedora/fedora-system:FOXML-1.0, info:fedora/fedora-system:METSFedoraExt-1.1, info:fedora/fedora-system:METSFedoraExt-1.0, info:fedora/fedora-system:ATOM-1.1, info:fedora/fedora-system:ATOMZip-1.1 </td>
+												</tr>
+												<tr>
+													<td class="methodTd"> context </td>
+													<td class="methodTd"> the export context, which determines how datastream URLs and content are represented </td>
+													<td class="methodTd"> public </td>
+													<td class="methodTd"> public, migrate, archive </td>
+												</tr>
+												<tr>
+													<td class="methodTd"> encoding </td>
+													<td class="methodTd"> the preferred encoding of the exported XML </td>
+													<td class="methodTd"> UTF-8 </td>
+													<td class="methodTd">&nbsp;</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+
+									<p>
+										<b>Examples</b>
+									</p>
+
+									<p>/objects/demo:29/export</p>
+
+									<p>/objects/demo:29/export?context=migrate</p>
+								</div>
+
+								<h3><a name="RESTAPI-getDatastream"></a>getDatastream</h3>
+								<p><a name="RESTAPI-getDatastream"></a></p>
+
+								<div class="panel">
+									<p>
+										<b>URL Syntax</b>
+									</p>
+
+									<p>/objects/{pid}/datastreams/{dsID} ? [asOfDateTime] [format] [validateChecksum]</p>
+
+									<p>
+										<b>HTTP Method</b>
+									</p>
+
+									<p>GET</p>
+
+									<p>
+										<b>HTTP Response</b>
+									</p>
+
+									<p>200</p>
+
+									<p>
+										<b>Parameters</b>
+									</p>
+
+									<div class="table-wrap">
+										<table class="methodTable">
+											<tbody>
+												<tr>
+													<th class="methodTh">
+														<b>Name</b>
+													</th>
+													<th class="methodTh">
+														<b>Description</b>
+													</th>
+													<th class="methodTh">
+														<b>Default</b>
+													</th>
+													<th class="methodTh">
+														<b>Options</b>
+													</th>
+												</tr>
+												<tr>
+													<td class="methodTd"> {pid} </td>
+													<td class="methodTd"> persistent identifier of the digital object </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd">&nbsp;</td>
+												</tr>
+												<tr>
+													<td class="methodTd"> {dsID} </td>
+													<td class="methodTd"> datastream identifier </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd">&nbsp;</td>
+												</tr>
+												<tr>
+													<td class="methodTd"> format </td>
+													<td class="methodTd"> the preferred output format </td>
+													<td class="methodTd"> html </td>
+													<td class="methodTd"> xml, html </td>
+												</tr>
+												<tr>
+													<td class="methodTd"> asOfDateTime </td>
+													<td class="methodTd"> indicates that the result should be relative to the digital object as it existed on the given date </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd"> yyyy-MM-dd or yyyy-MM-ddTHH:mm:ssZ </td>
+												</tr>
+												<tr>
+													<td class="methodTd"> validateChecksum </td>
+													<td class="methodTd"> verifies that the Datastream content has not changed since the checksum was initially computed. If asOfDateTime is null, Fedora will use the most recent version. </td>
+													<td class="methodTd"> false </td>
+													<td class="methodTd"> true, false </td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<p>
+										<b>Examples</b>
+									</p>
+
+									<p>/objects/demo:29/datastreams/DC</p>
+
+									<p>/objects/demo:29/datastreams/DC?format=xml</p>
+
+									<p>/objects/demo:29/datastreams/DC?format=xml&amp;validateChecksum=true</p>
+								</div>
+
+								<h3><a name="RESTAPI-getDatastreamHistory"></a>getDatastreamHistory</h3>
+
+								<div class="panel">
+									<p>
+										<b>URL Syntax</b>
+									</p>
+
+									<p>/objects/{pid}/datastreams/{dsid}/versions ? [format]</p>
+
+									<p>
+										<b>HTTP Method</b>
+									</p>
+
+									<p>GET</p>
+
+									<p>
+										<b>HTTP Response</b>
+									</p>
+
+									<p>200</p>
+
+									<p>
+										<b>Parameters</b>
+									</p>
+
+									<div class="table-wrap">
+										<table class="methodTable">
+											<tbody>
+												<tr>
+													<th class="methodTh">
+														<b>Name</b>
+													</th>
+													<th class="methodTh">
+														<b>Description</b>
+													</th>
+													<th class="methodTh">
+														<b>Default</b>
+													</th>
+													<th class="methodTh">
+														<b>Options</b>
+													</th>
+												</tr>
+												<tr>
+													<td class="methodTd"> format </td>
+													<td class="methodTd"> the preferred output format </td>
+													<td class="methodTd"> html </td>
+													<td class="methodTd"> xml, html </td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+
+									<p>
+										<b>Examples</b>
+									</p>
+
+									<p>GET: /objects/changeme:1/datastreams/DC/versions</p>
+
+									<p>GET: /objects/changeme:1/datastreams/DC/versions?format=xml</p>
+								</div>
+
+
+								<h3><a name="RESTAPI-getObjectXML"></a>getObjectXML</h3>
+
+								<div class="panel">
+									<p>
+										<b>URL Syntax</b>
+									</p>
+
+									<p>/objects/{pid}/objectXML</p>
+
+									<p>
+										<b>HTTP Method</b>
+									</p>
+
+									<p>GET</p>
+
+									<p>
+										<b>HTTP Response</b>
+									</p>
+
+									<p>200</p>
+
+									<p>
+										<b>Parameters</b>
+									</p>
+
+									<div class="table-wrap">
+										<table class="methodTable">
+											<tbody>
+												<tr>
+													<th class="methodTh">
+														<b>Name</b>
+													</th>
+													<th class="methodTh">
+														<b>Description</b>
+													</th>
+													<th class="methodTh">
+														<b>Default</b>
+													</th>
+													<th class="methodTh">
+														<b>Options</b>
+													</th>
+												</tr>
+												<tr>
+													<td class="methodTd"> {pid} </td>
+													<td class="methodTd"> persistent identifier of the digital object </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd">&nbsp;</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+
+									<p>
+										<b>Examples</b>
+									</p>
+
+									<p>/objects/demo:29/objectXML</p>
+								</div>
+
+								<h3><a name="RESTAPI-getRelationships"></a>getRelationships</h3>
+
+								<div class="panel">
+									<p>
+										<b>URL Syntax</b>
+									</p>
+
+									<p>/objects/{pid}/relationships ? [subject] [predicate] [format]</p>
+
+
+									<p>
+										<b>HTTP Method</b>
+									</p>
+
+									<p>GET</p>
+
+									<p>
+										<b>HTTP Response</b>
+									</p>
+
+									<p>200</p>
+
+									<p>
+										<b>Parameters</b>
+									</p>
+
+									<div class="table-wrap">
+										<table class="methodTable">
+											<tbody>
+												<tr>
+													<th class="methodTh">
+														<b>Name</b>
+													</th>
+													<th class="methodTh">
+														<b>Description</b>
+													</th>
+													<th class="methodTh">
+														<b>Default</b>
+													</th>
+													<th class="methodTh">
+														<b>Options</b>
+													</th>
+												</tr>
+												<tr>
+													<td class="methodTd"> {pid} </td>
+													<td class="methodTd"> persistent identifier of the digital object </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd">&nbsp;</td>
+												</tr>
+												<tr>
+													<td class="methodTd"> subject </td>
+													<td class="methodTd"> subject of the relationship(s).  Either a URI for the object or one of its datastreams </td>
+													<td class="methodTd"> URI of this object </td>
+													<td class="methodTd">&nbsp;</td>
+												</tr>
+												<tr>
+													<td class="methodTd"> predicate </td>
+													<td class="methodTd"> predicate of the relationship(s), if missing returns all predicates </td>
+													<td class="methodTd">&nbsp;</td>
+													<td class="methodTd">&nbsp;</td>
+												</tr>
+												<tr>
+													<td class="methodTd"> format </td>
+													<td class="methodTd"> format of the response </td>
+													<td class="methodTd"> rdf/xml </td>
+													<td class="methodTd"> xml (returns rdf/xml), rdf/xml, n-triples, turtle, sparql </td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+
+									<p>
+										<b>Examples</b>
+									</p>
+
+									<p>/objects/demo:29/relationships</p>
+
+									<p>/objects/demo:29/relationships?subject=info%3afedora%2fdemo%3a29%2fDC</p>
+								</div>
+
+							</div>
+
+					<!--
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+          -->
+       </div>
+      </div>
+
+      <hr>
+
+      <footer>
+				<!-- p>This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0 Unported License</a>.</p -->
+				<p>© 2012 <a href="http://www.canterbury.ac.nz/">University of Canterbury</a>. All rights reserved.</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

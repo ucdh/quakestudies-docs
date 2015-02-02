@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns="http://quakestudies.canterbury.ac.nz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://quakestudies.canterbury.ac.nz ../qsr.xsd" xmlns:dcmi="http://purl.org/dc/dcmitype/">
+  <License xml:id="license_1">
+    <properties>
+      <license_name>Standard YouTube License</license_name>
+      <license_description>YouTube hereby grants you permission to access and use the Service as set forth in these Terms of Service...</license_description>
+      <rights_url>http://www.youtube.com/t/terms</rights_url>
+      <license_provenance>Some rights reserved</license_provenance>
+    </properties>
+    <relations>
+    </relations>
+  </License>
+</content>

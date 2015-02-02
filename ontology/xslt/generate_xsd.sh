@@ -1,0 +1,1 @@
+xsltproc owl_to_schema.xslt ../owl/ceismic.owl > ../schema/qsr.xsd

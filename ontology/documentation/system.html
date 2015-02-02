@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Quakestudies Repository: system documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- note that the custom stylesheet overrides some of the CSS in the above stylesheets. -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+
+    <!-- <div class="navbar navbar-fixed-top"> -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Quakestudies Repository: system documentation</a>
+            <ul class="nav">
+              <li class="dropdown"><a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Ontology <b class="caret"></b></a>
+              	<ul class="dropdown-menu">
+									<li><a href="index.html">Ontology documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="introduction.html">Ontology introduction</a></li>
+									<li><a href="../owl/ceismic.owl">OWL-RDF ontology</a></li>
+									<li><a href="ontology.html">Ontology description</a></li>
+									<li><a href="vocabularies.html">Vocabularies</a></li>
+									<li><a href="../owl/ceismic.gif">Ontology diagram</a></li>
+									<li><a href="mappings.html">Mappings</a></li>
+              	</ul>
+              </li>
+              <li class="active dropdown"><a href="system.html" class="dropdown-toggle" data-toggle="dropdown">System <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="system.html">System documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="system.html#architecture">Architecture</a></li>
+				          <li><a href="system.html#administration_interfaces">Administration interfaces</a></li>
+				          <li><a href="system.html#authentication">Authentication</a></li>
+				          <li><a href="system.html#authorisation">Authorisation</a></li>
+								</ul>
+							</li>
+              <li class="dropdown"><a href="user.html" class="dropdown-toggle" data-toggle="dropdown">User <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="user.html">User documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="user.html#roles">Roles</a></li>
+									<li><a href="user.html#workflows">Workflows</a></li>
+									<li><a href="user.html#bulk_ingest">Generic bulk ingest</a></li>
+									<li><a href="user.html#fedora_vocab">Fedora Vocabulary</a></li>
+								</ul>
+							</li>
+              <li class="dropdown"><a href="api.html" class="dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="api.html">API documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="api.html#Introduction">Introduction</a></li>
+									<li><a href="api.html#ResourceIndexSearch">Resource index search</a></li>
+									<li><a href="api.html#RESTAPI">REST API</a></li>
+								</ul>
+							</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit" style="position: relative;">
+      		<div>
+						<img src="assets/eq-info.jpg" width="200"/>
+					</div>
+      		<div style="position: absolute; left: 300px; top: 52px;">
+						<h1>QSR system documentation</h1>
+						<p>Documentation for administrators of the Quakestudies repository. 
+						</p>
+						<!--
+						<p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+						-->
+					</div>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+
+        <div class="span3">
+					<ul>
+						<li><a href="#architecture">System architecture</a>
+							<ul>
+								<li><a href="#administration_cwa">CWA administration</a></li>
+								<li><a href="#administration_ucit">University of Canterbury IT administration</a></li>
+							</ul>
+						</li>
+          <li><a href="#administration_interfaces">Administration interfaces</a>
+						<ul>
+							<li><a href="#administration_interface_drupal">Drupal</a></li>
+							<li><a href="#administration_interface_solr">Solr</a></li>
+							<li><a href="#administration_interface_fedora">Fedora</a></li>
+							<li><a href="#administration_interface_risearch">Resource Index</a></li>
+							<li><a href="#administration_interface_gsearch">Fedora Generic Search</a></li>
+						</ul>
+					</li>
+					<li><a href="#authentication">Authentication</a>
+						<ul>
+							<li><a href="#authentication_drupal">Authentication of Drupal users</a></li>
+							<li><a href="#authentication_api">Authentication of API consumers</a></li>
+						</ul>
+					</li>
+					<li><a href="#authorisation">Authorisation</a>
+						<ul>
+							<li><a href="#authorisation_layers">Authorisation layers</a></li>
+							<li><a href="#authorisation_policies">Authorisation policies</a></li>
+						</ul>
+					</li>
+					</ul>
+				</div>
+
+        <div class="span8">
+					<h1><a name="architecture" href="#"></a>System architecture</h1>
+					<ul class="thumbnails">
+						<li class="span8">
+							<a href="assets/system_architecture.png" class="thumbnail">
+								<img src="assets/system_architecture.png" />
+							</a>
+						</li>
+					</ul>
+					<p>The Quakestudies system architecture has the following division of concerns:
+
+					<h2><a name="administration_cwa" href="#"></a>CWA administration</h2>
+					<p>CWA administers the following components:
+						<ul>
+							<li>The Fedora repository (including the Resource Index)</li>
+							<li>Solr</li>
+							<li>Fedora Generic Search</li>
+							<li>Drupal</li>
+							<li>Static pages (documentation, FAQ, etc)</li>
+						</ul>
+					</p>
+
+					<h2><a name="administration_ucit" href="#"></a>University of Canterbury IT administration</h2>
+					<p>The University of Canterbury administers the following components:
+						<ul>
+							<li>The SSL gateway, via which all traffic passes</li>
+							<li>The LDAP server</li>
+							<li>The caching architecture</li>
+						</ul>
+					</p>
+
+					<hr/>
+					<h1><a name="administration_interfaces"></a>Administration interfaces</h1>
+
+					<h2><a name="administration_interface_drupal"></a>Drupal</h2>
+					<p>All Drupal administration is performed via the Drupal front-end interface, with roles defining the privileges
+					associated with a given user.</p>
+					<p>User information can be validated using two mechanisms:
+						<ol>
+							<li><b>LDAP</b>: University of Canterbury's LDAP server is used to store details of users the the University recognises (typicaly staff and students).
+							This mechanism allows any user whose credentials can be authenticated against the LDAP store to be granted access to the system, though until they are assigned to specific roles
+							by the Quakestudies <b>Superuser</b> they will only have public read permissions.</li>
+							<li><b>MySQL</b>: The <b>Superuser</b> may specifically create a user via Drupal whose details will be stored directly in MySQL, and not authenticated against the LDAP store.
+							This allows for the creation of users whom do not exist in the LDAP store (for example, other CESIMIC partners).</li>
+						</ol>
+					</p>
+
+					<h2><a name="administration_interface_solr"></a>Solr</h2>
+					<p><a href="http://lucene.apache.org/solr/">Solr</a> is a search server that is used by Quakestudies to provide unstructured (i.e. free-text) search services to the Drupal front-end.</p>
+					<p>Quakestudies Solr instance is to be found at <a href="https://quakestudies.canterbury.ac.nz:8443/solr/">https://quakestudies.canterbury.ac.nz:8443/solr/</a>, with the administration interface available at <a href="https://quakestudies.canterbury.ac.nz:8443/solr/admin/">https://quakestudies.canterbury.ac.nz:8443/solr/admin/</a>.</p>
+					<p>At this point it is expected that only CWA will need access to the Solr admnistration interface and API.</p>
+
+					<h2><a name="administration_interface_fedora"></a>Fedora</h2>
+					<p>Fedora administration is performed using the <a href="https://wiki.duraspace.org/display/FEDORA34/Fedora+Web+Administrator">Fedora administration interface</a>, which can be used for the following functions:
+					<ul>
+						<li>Performing simple searches across Dublin-core metadata and object relationships</li>
+						<li>Viewing, creating, editing and exporting datastreams directly as XML</li>
+					</ul>
+					</p>
+					<p>As the Fedora administration interface expects the user to have an understanding of the data representation in Fedora (i.e. the XML representation used to represent the Quakestudies ontology), at this point it is expected that only CWA will need access to the Fedora admnistration interface.</p>
+
+					<h2><a name="administration_interface_risearch"></a>Resource Index</h2>
+					<p>The <a href="https://wiki.duraspace.org/display/FEDORA34/Resource+Index">Fedora Resource Index</a> provides the infrastructure for indexing relationships amongst Fedora objects and their component datastreams. 
+					The Quakestudies Repository primarily uses the Resource Index to provide Drupal with a means of performing structured queries using the relationships expressed in the Quakestudies ontology.</p>
+					<p>As the Resource Index interface expects the user to have an understanding of the Quakestudies ontology as well as an understanding of query methods such as SPO and ITQL, at this point it is expected that only CWA will need access to the Resource Index interface.</p>
+
+					<h2><a name="administration_interface_gsearch"></a>Fedora Generic Search</h2>
+					<p>The <a href="https://wiki.duraspace.org/display/FCSVCS/Generic+Search+Service+2.2">Fedora Generic Search</a> interface provides a mechanism for percolating details of Fedora-stored data to Solr, keeping the Solr search service in synch with changes in Fedora.</p>
+					<p>As the Fedora Generic Search interface expects the user to have an understanding of the Quakestudies ontology its representation in Fedora, at this point it is expected that only CWA will need access to the Fedora Generic Search interface.</p>
+					
+
+					<hr/>
+					<h1><a name="authentication"></a>Authentication</h1>
+					<ul class="thumbnails">
+						<li class="span8">
+							<a href="assets/quakestudies_authentication.png" class="thumbnail">
+								<img src="assets/quakestudies_authentication.png" />
+							</a>
+						</li>
+					</ul>
+					
+					<h2><a name="authentication_drupal"></a>Authentication of Drupal users</h2>
+					<ul>
+						<li>The user is initially authenticated against the Drupal MySQL database. If no match to the username is detected, the UC IT LDAP store is queried.
+						Note that currently, users whose credentials are stored in the LDAP store (i.e. not in the MySQL database) will only have email notifications generated if the University of Canterbury
+						has associated email functionality with their LDAP profile.</li>
+						<li>Once the user credentials have been authenticated at the Drupal level, the user is authenticated against Fedora using the <b>QSRFedoraJAASFilter</b> component, which operates under the <a href="http://en.wikipedia.org/wiki/Java_Authentication_and_Authorization_Service">JAAS framework</a>.
+						The user id is submitted along with a fixed password (configurable by the Drupal administrator) to the <b>QSRFedoraJAASFilter</b> component, which is also configured
+						to accept requests from users using this fixed password.</li>
+						<li>The <b>QSRFedoraJAASFilter</b> component queries the <b>Resource Index</b> to determine the roles associated with the supplied user id.
+						In order to do this, the <b>_rolefetcher</b> role, defined in the Fedora configuration file, <b>fedora-users.xml</b> is used.
+						The role information retrieved from the <b>Resource Index</b> (and maintained by the <b>Superuser</b> via Drupal), determines the bundle of permissions that a given user has.</li>
+						<li>A user will be associated with at least one role in the <b>Resource Index</b>, the public role, which allows them the lowest level of access.</li>
+						<li>As well as being represented in the <b>Resource Index</b>, the role information is used to form the <a href="https://wiki.duraspace.org/display/FEDORA34/Fedora+XACML+Policy+Writing+Guide">XACML policy</a> that accompanies each Fedora object in the form of a datastream, 
+						and which enforces the permissions that a given role enjoys as specified in the Drupal interface.</li>
+					</ul>
+					<h2><a name="authentication_api"></a>Authentication of API consumers</h2>
+					<ul>
+						<p>As API consumers are accessing the Fedora APIs directly (i.e. not via Drupal), authentication for these users differs from that of Drupal users.</p>
+						<li>The API consumer's request is handled by the <b>XML-user</b> JAAS component, which details of roles associated with
+						the user's user id from a Fedora configuration file, <b>fedora-users.xml</b>. 
+						This allows API consumers to be from organisations outside of the University of Canterbury, and means that they may be given API read-access, but do not have to be given any privileged role to access functionality in the Drupal front-end.</li>
+						<li>As configured at the time of installation, <b>fedora-users.xml</b> has only two roles defined:
+							<ul>
+								<li>fedoraAdmin</li>
+								<li>_rolefetcher</li>
+							</ul>
+						</li>
+					</ul>
+					</p>
+
+					<hr/>
+					<h1><a name="authorisation"></a>Authorisation</h1>
+					<ul class="thumbnails">
+						<li class="span8">
+							<a href="assets/quakestudies_authorisation.png" class="thumbnail">
+								<img src="assets/quakestudies_authorisation.png" />
+							</a>
+						</li>
+					</ul>
+
+					<h2><a name="authorisation_layers"></a>Authorisation layers</h2>
+					<p>The Quakestudies Repository implements multiple layers of authorisation regarding access to content stored in QSR, and the privileges regarding that content. 
+						<ul>
+							<li><b>A: Menu hook &#8212; roles to write?</b> A menu hook is implemented in Drupal such that a query is made to the <b>Resource Index</b> to determine whether the user has any roles allowing write-access to the content.</li>
+							<li><b>B: Menu hook &#8212; PID existence?</b> Once it has been established whether or no a write-access role is associated with the user, another query is mde to the <b>Resource Index</b> to determine whether the actual content (referenced by a Fedora <a href="https://wiki.duraspace.org/display/FEDORA35/Fedora+Identifiers#FedoraIdentifiers-PIDs">Persistent Identifier</a>, or PID) exists.</li>
+							<li><b>C: QsrRiSearch function &#8212; ITQL filters</b>. A Drupal function, RISearch, ensures that any <a href="http://docs.mulgara.org/tutorial/itql.html">ITQL</a> queries made to the <b>Resource Index</b> are accompanied by a filter to ensure that only results relevant to the roles associated with the user are returned.</li>
+							<li><b>D: XACML policies</b>. Once the above have been satisfied, and Drupal makes a call to Fedora to obtain the actual Fedora object, Fedora will only grant access if the XACML policy associated with that object is satisfied. 
+							This ensures that only content authorised for read use by particular roles is returned to a user with that role.</li>
+						</ul>
+					</p>
+					
+					<h2><a name="authorisation_policies"></a>Authorisation policies</h2>
+					<p>Quakestudies Repository authorisation is based on policies defined and maintained as roles in Drupal, and implemented in Fedora as <a href="https://wiki.duraspace.org/display/FEDORA34/Fedora+XACML+Policy+Writing+Guide">XACML</a>, stored per Fedora object as a component datastream,
+					and with a global XACML policy also in force.
+					</p>
+					<p>
+						<ul>
+							<li>Whenever a role is created or modified in Drupal, triples representing the role information are written to the <b>Resource Index</b>.</li>
+							<li>Given that each class instance stored in Fedora (i.e. Fedora object) has an associated XACML policy stream, a user's role governs what permissions they have regarding each class.</li>
+							<li>Whenever role membership changes because of modification via the Drupal interface (i.e. a user is added to, or removed from a role), the resulting changes percolated to the <b>Resource Index</b> are relatively simple, as they only affect the triples associated with that user.</li>
+							<li>Whenever privileges associated with a particular role change because of modifications via the Drupal interface, the affected XACML policies must be rebuilt.
+							Note that this means that if a role is associated with many Fedora objects, then significant time may be required to update these XACML policies.</li>
+							<li>A cron-job, configurable in Drupal, runs every three hours in order to determine whether any <b>availabilities</b> have changed such that they have become available or unavailable based on their associated <b>datetimes</b>, 
+							and all Fedora objects associated with these <b>availabilities</b> have their XACML policies updated accordingly.</li>
+					</p>
+					
+					<!--
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+          -->
+       </div>
+      </div>
+
+      <hr>
+
+      <footer>
+				<p>© 2012 <a href="http://www.canterbury.ac.nz/">University of Canterbury</a>. All rights reserved.</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

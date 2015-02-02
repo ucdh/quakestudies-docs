@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Quakestudies Repository: ontology mappings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- note that the custom stylesheet overrides some of the CSS in the above stylesheets. -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+  <!-- <div class="navbar navbar-fixed-top"> -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Quakestudies Repository: ontology mappings</a>
+            <ul class="nav">
+              <li class="active dropdown"><a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Ontology <b class="caret"></b></a>
+              	<ul class="dropdown-menu">
+									<li><a href="index.html">Ontology documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="introduction.html">Ontology introduction</a></li>
+									<li><a href="../owl/ceismic.owl">OWL-RDF ontology</a></li>
+									<li><a href="ontology.html">Ontology description</a></li>
+									<li><a href="vocabularies.html">Vocabularies</a></li>
+									<li><a href="../owl/ceismic.gif">Ontology diagram</a></li>
+									<li><a href="mappings.html">Mappings</a></li>
+              	</ul>
+              </li>
+              <li class="dropdown"><a href="system.html" class="dropdown-toggle" data-toggle="dropdown">System <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="system.html">System documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="system.html#architecture">Architecture</a></li>
+				          <li><a href="system.html#administration_interfaces">Administration interfaces</a></li>
+				          <li><a href="system.html#authentication">Authentication</a></li>
+				          <li><a href="system.html#authorisation">Authorisation</a></li>
+								</ul>
+							</li>
+              <li class="dropdown"><a href="user.html" class="dropdown-toggle" data-toggle="dropdown">User <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="user.html">User documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="user.html#roles">Roles</a></li>
+									<li><a href="user.html#workflows">Workflows</a></li>
+									<li><a href="user.html#bulk_ingest">Generic bulk ingest</a></li>
+									<li><a href="user.html#fedora_vocab">Fedora Vocabulary</a></li>
+								</ul>
+							</li>
+              <li class="dropdown"><a href="api.html" class="dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="api.html">API documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="api.html#Introduction">Introduction</a></li>
+									<li><a href="api.html#ResourceIndexSearch">Resource index search</a></li>
+									<li><a href="api.html#RESTAPI">REST API</a></li>
+								</ul>
+							</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit" style="position: relative;">
+      		<div>
+						<img src="assets/eq-info.jpg" width="200"/>
+					</div>
+      		<div style="position: absolute; left: 300px; top: 52px;">
+						<h1>QSR ontology mappings</h1>
+						<p>Documentation about how the Quakestudies repository ontology maps to other data models. 
+						</p>
+						<!--
+						<p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+						-->
+					</div>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+
+        <div class="span2">
+					<ul>
+						<li>
+							<a href="#dc">Dublin Core</a>
+						</li>
+						<li>
+							<a href="#digitalnz">DigitalNZ</a>
+						</li>
+					</ul>
+				</div>
+
+        <div class="span9">
+					<h1><a name="dc" href="#"></a>Dublin Core</h1>
+					<p>The Quakestudies repository ontology maps to Dublin Core elements as follows. Note that the table below shows both the equivalent class.element from the Quakestudies Repository ontology, as well as the <a href="api.html#ResourceIndexSearch-SPO">SPO query (or sequence of queries)</a> needed to navigate from a given QSR Object instance to the class instance that provides the information.</p>
+					<table class="table table-striped table-bordered table-condensed">
+						<thead>
+							<tr>
+								<th>DC Element</th>
+								<th>DC Element refinements</th>
+								<th>Equivalent QSR Class.element</th>
+								<th  class="span8">Example SPO queries</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Title</td>
+								<td></td>
+								<td>Object.object_title (dc:title)</td>
+								<td><pre>&lt;info:fedora/qsr-object:3433&gt;
+&lt;http://purl.org/dc/elements/1.1/title&gt;
+*</pre></td>
+							</tr>
+							<tr>
+								<td>Creator</td>
+								<td></td>
+								<td>Party.party_display_title <br />via Object.hasCreatorParty</td>
+								<td><pre>&lt;info:fedora/qsr-object:3302&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasCreatorParty&gt;
+&lt;info:fedora/qsr-party:123&gt;</pre></td>
+							</tr>
+							<tr>
+								<td>Subject</td>
+								<td></td>
+								<td>Category.category_title <br />via Object.hasCategory</td>
+								<td><pre>&lt;info:fedora/qsr-object:3296&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasCategory&gt;
+&lt;info:fedora/qsr-category:234&gt;</pre></td>
+							</tr>
+							<tr>
+								<td>Description</td>
+								<td></td>
+								<td>Object.description (dc:description)</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Publisher</td>
+								<td></td>
+								<td><p>ContentPartner.content_partner_display_title <br />via Collection.isPublishedBy <br />via Object.isCollectedInto</p></td>
+								<td><pre>&lt;info:fedora/qsr-object:3297&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isCollectedInto&gt;
+&lt;info:fedora/qsr-collection:1099&gt;
+
+&lt;info:fedora/qsr-collection:1099&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isPublishedBy&gt;
+&lt;info:fedora/qsr-content-partner:456&gt;</pre></td>
+							</tr>
+							<tr>
+								<td>Contributor</td>
+								<td></td>
+								<td>Party.party_display_title <br />via Object.hasContributorParty</td>
+								<td><pre>&lt;info:fedora/qsr-object:3296&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasContributorParty&gt;
+&lt;info:fedora/qsr-party:678&gt;</pre></td>
+							</tr>
+							<tr>
+								<td>Date</td>
+								<td>Created</td>
+								<td><p>DateTime.point_datetime <br />via Event.hasStartDateTime / Event.hasEndDateTime <br />via Object.hasRelationshipToEvent</p></td>
+								<td><pre>&lt;info:fedora/qsr-object:3296&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasRelationshipToEvent&gt;
+&lt;info:fedora/qsr-event:678&gt;
+
+&lt;info:fedora/qsr-event:678&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasStartDateTime&gt;
+&lt;info:fedora/qsr-datetime:789&gt;</pre></td>
+							</tr>
+							<tr>
+								<td>Date</td>
+								<td>Available</td>
+								<td>DateTime.point_datetime <br />via Availability.hasStartDateTime / Availability.hasEndDateTime <br />via Part.hasAvailability <br />via Part.isPartOf</td>
+								<td><pre>&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isPartOf&gt;
+&lt;info:fedora/qsr-object:3433&gt;
+
+&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasAvailability&gt;
+&lt;info:fedora/qsr-format:657&gt;
+
+&lt;info:fedora/qsr-availability:657&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasStartDateTime&gt;
+&lt;info:fedora/qsr-datetime:789&gt;</pre></td>
+							</tr>
+							<tr>
+								<td>Type</td>
+								<td></td>
+								<td>Format.format_type <br />via Part.hasFormat <br />via Part.isPartOf</td>
+								<td><pre>&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isPartOf&gt;
+&lt;info:fedora/qsr-object:3433&gt;
+
+&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasFormat&gt;
+&lt;info:fedora/qsr-format:876&gt;</pre></td>
+							</tr>
+							<tr>
+								<td>Format</td>
+								<td>Medium</td>
+								<td>Format.mime_type <br />via Part.hasFormat <br />via Part.isPartOf</td>
+								<td><pre>&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isPartOf&gt;
+&lt;info:fedora/qsr-object:3433&gt;
+
+&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasFormat&gt;
+&lt;info:fedora/qsr-format:876&gt;</pre></td>
+							</tr>
+							<tr>
+								<td>Format</td>
+								<td>Extent</td>
+								<td>Part.extent <br />via Part.isPartOf</td>
+								<td><pre>&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isPartOf&gt;
+&lt;info:fedora/qsr-object:3433&gt;</pre></td>
+							</tr>
+							<tr>
+								<td>identifier</td>
+								<td></td>
+								<td>dc:identifier</td>
+								<td><pre>&lt;info:fedora/qsr-object:3433&gt;
+&lt;http://purl.org/dc/elements/1.1/identifier&gt; &quot;qsr-object:3433&quot;</pre></td>
+							</tr>
+							<tr>
+								<td>source</td>
+								<td></td>
+								<td>Part.source</td>
+								<td><pre>&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isPartOf&gt;
+&lt;info:fedora/qsr-object:3433&gt;</pre></td>
+							</tr>
+							<tr>
+								<td>language</td>
+								<td></td>
+								<td>Part.language</td>
+								<td><pre>&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isPartOf&gt;
+&lt;info:fedora/qsr-object:3433&gt;</pre></td>
+							</tr>
+							<tr>
+								<td>Relation</td>
+								<td>isVersionOf</td>
+								<td>dc:identifier</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>hasVersion</td>
+								<td>audit:record ID or foxml:datastreamVersion[@ID]</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>isPartOf</td>
+								<td>dc:identifier <br />via Part.isPartOf</td>
+								<td><pre>&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isPartOf&gt;
+&lt;info:fedora/qsr-object:3433&gt;</pre></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>hasPart</td>
+								<td>via Part.isPartOf</td>
+								<td><pre>&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isPartOf&gt;
+&lt;info:fedora/qsr-object:3433&gt;</pre></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>isFormatOf</td>
+								<td>Format.mime_type <br />via Part.hasFormat <br />via Part.isPartOf</td>
+								<td><pre>&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isPartOf&gt;
+&lt;info:fedora/qsr-object:3433&gt;
+
+&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasFormat&gt;
+&lt;info:fedora/qsr-format:876&gt;</pre></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>hasFormat</td>
+								<td>via Part.hasFormat  <br />via Part.isPartOf</td>
+								<td><pre>&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isPartOf&gt;
+&lt;info:fedora/qsr-object:3433&gt;
+
+&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasFormat&gt;
+&lt;info:fedora/qsr-format:876&gt;</pre></td>
+							</tr>
+							<tr>
+								<td>coverage</td>
+								<td>spatial (DCMI Point)</td>
+								<td>Position.longitude &amp; Position.latitude <br />via Address.hasPosition <br />via Object.hasAddress</td>
+								<td><pre>&lt;info:fedora/qsr-object:123&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasAddress&gt;
+&lt;info:fedora/qsr-address:567&gt;
+
+&lt;info:fedora/qsr-address:567&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasPosition&gt;
+&lt;info:fedora/qsr-position:789&gt;</pre></td>
+							</tr>
+							<tr>
+								<td>coverage</td>
+								<td>temporal (DCMI Period)</td>
+								<td>Event.event_title <br />via Object.hasRelationshipToEvent</td>
+								<td><pre>&lt;info:fedora/qsr-object:3296&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasRelationshipToEvent&gt;
+&lt;info:fedora/qsr-event:678&gt;</pre></td>
+							</tr>
+							<tr>
+								<td>Rights</td>
+								<td></td>
+								<td>License.license_title <br />via Availability.hasLicense <br />via Part.hasAvailability and via Part.isPartOf</td>
+								<td><pre>&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isPartOf&gt;
+&lt;info:fedora/qsr-object:3433&gt;
+
+&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasAvailability&gt;
+&lt;info:fedora/qsr-avaiability:657&gt;
+
+&lt;info:fedora/qsr-availability:657&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasLicense&gt;
+&lt;info:fedora/qsr-license:123&gt;</pre></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h1><a name="digitalnz" href="#"></a>DigitalNZ</h1>
+					<p>The Quakestudies repository ontology maps to elements in the DigitalNZ API model as follows. Note that the table below shows both the equivalent class.element from the Quakestudies Repository ontology, as well as the <a href="api.html#ResourceIndexSearch-SPO">SPO query (or sequence of queries)</a> needed to navigate from a given QSR Object instance to the class instance that provides the information.</p>
+					<table class="table table-striped table-bordered table-condensed">
+						<thead>
+							<tr>
+								<th>Element</th>
+								<th>Equivalent QSR Class.element</th>
+								<th>Example SPO queries</th>
+							</tr>
+						</thead>
+						<tbody>
+  <tr>
+    <td>content_partner</td>
+    <td>ContentPartner.content_partner_title <br />via Collection.isPublishedBy <br />via Object.isCollectedInto</td>
+    <td>
+      <pre>&lt;info:fedora/qsr-object:123&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isCollectedInto&gt;
+&lt;info:fedora/qsr-collection:234&gt;
+ 
+&lt;info:fedora/qsr-collection:234&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isPublishedBy&gt;
+&lt;info:fedora/qsr-content_partner:345&gt;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>display_content_partner</td>
+    <td>ContentPartner.content_partner_display_title <br />via Collection.isPublishedBy <br />via Object.isCollectedInto</td>
+    <td>
+      <pre>&lt;info:fedora/qsr-object:123&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isCollectedInto&gt;
+&lt;info:fedora/qsr-collection:234&gt;
+
+&lt;info:fedora/qsr-collection:234&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isPublishedBy&gt;
+&lt;info:fedora/qsr-content_partner:345&gt;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>Category</td>
+    <td>Category.category_title <br />via Object.hasCategory</td>
+    <td>
+      <pre>&lt;info:fedora/qsr-object:123&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasCategory&gt;
+&lt;info:fedora/qsr-category:456&gt;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>landing_url</td>
+    <td>derived from dc:identifier</td>
+    <td>
+      <pre>&lt;info:fedora/qsr-object:3433&gt;
+&lt;http://purl.org/dc/elements/1.1/identifier&gt; &quot;qsr-object:3433&quot;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>copyright</td>
+    <td>License.license_description <br />via Availability.hasLicense <br />via Part.hasAvailability and Part.isPartOf</td>
+    <td>
+      <pre>&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isPartOf&gt;
+&lt;info:fedora/qsr-object:3433&gt;
+
+&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasAvailability&gt;
+&lt;info:fedora/qsr-availability:123&gt;
+
+&lt;info:fedora/qsr-availability:123&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasLicense&gt;
+&lt;info:fedora/qsr-license:234&gt;
+ </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>thumbnail_url</td>
+    <td>
+      <i></i>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Collection</td>
+    <td>Collection.collection_title <br />via Object.isCollectedInto</td>
+    <td>
+      <pre>&lt;info:fedora/qsr-object:123&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isCollectedInto&gt;
+&lt;info:fedora/qsr-collection:234&gt;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>display_collection</td>
+    <td>Collection.collection_display_title <br />via Object.isCollectedInto</td>
+    <td>
+      <pre>&lt;info:fedora/qsr-object:123&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isCollectedInto&gt;
+&lt;info:fedora/qsr-collection:234&gt;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>object_url</td>
+    <td>derived from dc:identifier</td>
+    <td>
+      <pre>&lt;info:fedora/qsr-object:3433&gt;
+&lt;http://purl.org/dc/elements/1.1/identifier&gt; &quot;qsr-object:3433&quot;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>Placename</td>
+    <td>Position.position_title <br />via Address.hasPosition <br />via Object.hasAddress</td>
+    <td>
+      <pre>&lt;info:fedora/qsr-object:123&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasAddress&gt;
+&lt;info:fedora/qsr-address:567&gt;
+ 
+&lt;info:fedora/qsr-address:567&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasPosition&gt;
+&lt;info:fedora/qsr-position:789&gt;
+ </p>
+      <p></pre>
+    </td>
+  </tr>
+  <tr>
+    <td>rights_url</td>
+    <td>License.rights_url <br />via Availability.hasLicense <br />via Object.hasAvailability</td>
+    <td>
+      <pre>&lt;info:fedora/qsr-object:3296&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasAvailability&gt;
+&lt;info:fedora/qsr-availability:123&gt;
+
+&lt;info:fedora/qsr-availability:123&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasLicense&gt;
+&lt;info:fedora/qsr-license:234&gt;
+ </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>license</td>
+    <td>License.license_title <br />via Availability.hasLicense <br />via Object.hasAvailability</td>
+    <td>
+      <pre>&lt;info:fedora/qsr-object:3296&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasAvailability&gt;
+&lt;info:fedora/qsr-availability:123&gt;
+
+&lt;info:fedora/qsr-availability:123&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasLicense&gt;
+&lt;info:fedora/qsr-license:234&gt;
+ </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>credit_creator</td>
+    <td>Object.creator_credit</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Fulltext</td>
+    <td>
+      <i>Derived from Object</i>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>object_size</td>
+    <td>
+      <i>Derived from Part.extent</i> <br />via Part.isPartOf
+    </td>
+    <td>
+      <pre>&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isPartOf&gt;
+&lt;info:fedora/qsr-object:3433&gt;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>object</td>
+    <td>
+      <i>Derived from Object, and Format</i> <br />via Part.hasFormat <br />via isPartOf
+    </td>
+    <td>
+      <pre>&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#isPartOf&gt;
+&lt;info:fedora/qsr-object:3433&gt;
+
+&lt;info:fedora/qsr-part:4066&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasFormat&gt;
+&lt;info:fedora/qsr-format:876&gt;</pre>
+    </td>
+  </tr>
+  <tr>
+    <td>no_landing_page</td>
+    <td>
+      <i>Not used</i>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Location</td>
+    <td>Position.title <br />via Address.hasPosition <br />via Object.hasAddress</td>
+    <td>
+      <pre>&lt;info:fedora/qsr-object:123&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasAddress&gt;
+&lt;info:fedora/qsr-address:567&gt;
+ 
+&lt;info:fedora/qsr-address:567&gt;
+&lt;http://quakestudies.canterbury.ac.nz#hasPosition&gt;
+&lt;info:fedora/qsr-position:789&gt;</pre>
+    </td>
+  </tr>
+  </tbody>
+				  </table>
+				  
+					<!--
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+          -->
+       </div>
+      </div>
+
+      <hr>
+
+      <footer>
+				<p>© 2012 <a href="http://www.canterbury.ac.nz/">University of Canterbury</a>. All rights reserved.</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

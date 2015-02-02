@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns="http://quakestudies.canterbury.ac.nz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://quakestudies.canterbury.ac.nz ../qsr.xsd" xmlns:dcmi="http://purl.org/dc/dcmitype/">
+  <Format xml:id="format_1">
+    <properties>
+      <format_type>MovingImage</format_type>
+      <mime_type>application/x-shockwave-flash</mime_type>
+    </properties>
+    <relations></relations>
+  </Format>
+</content>

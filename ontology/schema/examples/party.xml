@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns="http://quakestudies.canterbury.ac.nz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://quakestudies.canterbury.ac.nz ../qsr.xsd" xmlns:dcmi="http://purl.org/dc/dcmitype/">
+  <Party xml:id="party_1">
+    <properties>
+      <party_name>CTV</party_name>
+      <party_phone_number></party_phone_number>
+      <party_social_type></party_social_type>
+      <party_url>http://www.ctv.co.nz</party_url>
+      <party_foreign_uri></party_foreign_uri>
+      <party_foreign_identifier></party_foreign_identifier>
+      <party_display_name>Canterbury Television</party_display_name>
+      <party_social_username></party_social_username>
+      <party_email></party_email>
+    </properties>
+    <relations>
+      <isMemberOfRole idref="#role_1"></isMemberOfRole>
+      <isMemberOfContentPartner idref="#content_partner_1"></isMemberOfContentPartner>
+      <hasAddress></hasAddress>
+    </relations>
+  </Party>
+</content>

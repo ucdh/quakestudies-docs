@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns="http://quakestudies.canterbury.ac.nz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://quakestudies.canterbury.ac.nz ../qsr.xsd" xmlns:dcmi="http://purl.org/dc/dcmitype/">
+  <Object xml:id="object_1">
+    <properties>
+      <object_content><!-- Could possibly be HTML of page --></object_content>
+      <object_thumbnail_url>http://i2.ytimg.com/vi/I-XpS3NMFVU/default.jpg</object_thumbnail_url>
+      <object_url>http://www.youtube.com/watch?v=I-XpS3NMFVU</object_url>
+      <object_identifier>http://www.youtube.com/watch?v=I-XpS3NMFVU</object_identifier>
+      <description>YouTube video (2:35) of image montage of earthquake damage in Christchurch after September 04 earthquake</description>
+      <seo_text></seo_text>
+      <title>Canterbury Earthquake: Photos of the devastation in the Christchurch CBD</title>
+      <creator_credit>Copyright CTV</creator_credit>
+    </properties>
+    <relations>      
+      <hasContributorParty idref="#party_1"></hasContributorParty>
+      <hasSourceParty idref="#party_2"></hasSourceParty>
+      <isCollectedInto idref="#collection_1"></isCollectedInto>
+      <hasCategory idref="#category_1"></hasCategory>
+      <hasRelationshipToEvent idref="#event_1"></hasRelationshipToEvent>
+      <hasCreatorParty idref="#party_1"></hasCreatorParty>
+      <hasAddress></hasAddress>
+    </relations>
+  </Object>
+</content>

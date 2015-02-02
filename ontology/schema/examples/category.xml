@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns="http://quakestudies.canterbury.ac.nz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://quakestudies.canterbury.ac.nz ../qsr.xsd" xmlns:dcmi="http://purl.org/dc/dcmitype/">
+  <Category xml:id="category_1">
+    <properties>
+      <category_domain>Other</category_domain>
+      <category_name>Earthquake video</category_name>
+      <seo_text></seo_text>
+    </properties>
+    <relations>
+      <hasCategory><!-- Categories may be taxonomic --></hasCategory>
+    </relations>
+  </Category>
+</content>

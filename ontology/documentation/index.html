@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Quakestudies Repository: ontology documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- note that the custom stylesheet overrides some of the CSS in the above stylesheets. -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+
+    <!-- <div class="navbar navbar-fixed-top"> -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Quakestudies Repository: ontology documentation</a>
+            <ul class="nav">
+              <li class="active dropdown"><a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Ontology <b class="caret"></b></a>
+              	<ul class="dropdown-menu">
+									<li><a href="index.html">Ontology documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="introduction.html">Ontology introduction</a></li>
+									<li><a href="../owl/ceismic.owl">OWL-RDF ontology</a></li>
+									<li><a href="ontology.html">Ontology description</a></li>
+									<li><a href="vocabularies.html">Vocabularies</a></li>
+									<li><a href="../owl/ceismic.gif">Ontology diagram</a></li>
+									<li><a href="mappings.html">Mappings</a></li>
+              	</ul>
+              </li>
+              <li class="dropdown"><a href="system.html" class="dropdown-toggle" data-toggle="dropdown">System <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="system.html">System documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="system.html#architecture">Architecture</a></li>
+				          <li><a href="system.html#administration_interfaces">Administration interfaces</a></li>
+				          <li><a href="system.html#authentication">Authentication</a></li>
+				          <li><a href="system.html#authorisation">Authorisation</a></li>
+								</ul>
+							</li>
+              <li class="dropdown"><a href="user.html" class="dropdown-toggle" data-toggle="dropdown">User <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="user.html">User documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="user.html#roles">Roles</a></li>
+									<li><a href="user.html#workflows">Workflows</a></li>
+									<li><a href="user.html#bulk_ingest">Generic bulk ingest</a></li>
+									<li><a href="user.html#fedora_vocab">Fedora Vocabulary</a></li>
+								</ul>
+							</li>
+              <li class="dropdown"><a href="api.html" class="dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="api.html">API documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="api.html#Introduction">Introduction</a></li>
+									<li><a href="api.html#ResourceIndexSearch">Resource index search</a></li>
+									<li><a href="api.html#RESTAPI">REST API</a></li>
+								</ul>
+							</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit" style="position: relative;">
+      		<div>
+						<img src="assets/eq-info.jpg" width="200"/>
+					</div>
+      		<div style="position: absolute; left: 300px; top: 52px;">
+						<h1>Quakestudies ontology</h1>
+						<p>Documentation about the ontology supporting the Quakestudies repository. 
+						</p>
+						<!--
+						<p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+						-->
+					</div>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+
+        <div class="span3">
+					<ul>
+						<li>
+							<a href="#ontology_introduction">Ontology introduction</a>
+						</li>
+						<li>
+							<a href="#owl">OWL-RDF ontology</a>
+						</li>
+						<li>
+							<a href="#ontology_description">Ontology description</a>
+						</li>
+						<li>
+							<a href="#vocabularies">Vocabularies</a>
+						</li>
+						<li>
+							<a href="#ontology_diagram">Ontology diagram</a>
+						</li>
+						<li>
+							<a href="#mappings">Mappings</a>
+						</li>
+					</ul>
+				</div>
+
+        <div class="span8">
+					<h1><a name="ontology_introduction" href="introduction.html">Ontology introduction</a></h1>
+					<p>Introduction to the Quakestudies repository ontology.</p>
+
+					<h1><a name="ontology_description" href="../owl/ceismic.owl">OWL-RDF ontology</a></h1>
+					<p>The Quakestudies repository ontology, expressed as OWL-RDF. This is the core ontology file, generated and maintained by <a href="http://protege.stanford.edu/overview/protege-owl.html">Protégé-owl</a>. All other files and documentation regarding the ontology are derived from this OWL-RDF file using XSLT stylesheets.</p>
+
+					<h1><a name="ontology_description" href="ontology.html">Ontology description</a></h1>
+					<p>The human-readable field-by-field description of the ontology supporting the Quakestudies repository, as derived from the OWL-RDF file.</p>
+	
+					<h1><a name="vocabularies" href="vocabularies.html">Vocabularies</a></h1>
+					<p>The vocabularies employed by the Quakestudies repository ontology.</p>
+
+					<h1><a name="mappings" href="mappings.html">Ontology mappings</a></h1>
+					<p>How the Quakestudies repository ontology maps to other data models.</p>
+
+					<h1><a name="ontology_diagram" href="../owl/ceismic.gif"></a>Ontology diagram</h1>
+					<p>The visual representation of the Quakestudies repository ontology, as generated by the <a href="http://protegewiki.stanford.edu/wiki/OntoViz">OntoViz plugin</a> in Protégé-owl.</p>
+					<ul class="thumbnails">
+						<li class="span8">
+							<a href="../owl/ceismic.gif" class="thumbnail">
+								<img src="../owl/ceismic.gif" />
+							</a>
+						</li>
+					</ul>
+
+					<!--
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+          -->
+       </div>
+      </div>
+
+      <hr>
+
+      <footer>
+				<p>© 2012 <a href="http://www.canterbury.ac.nz/">University of Canterbury</a>. All rights reserved.</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

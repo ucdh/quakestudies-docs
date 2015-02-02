@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns="http://quakestudies.canterbury.ac.nz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://quakestudies.canterbury.ac.nz ../qsr.xsd" xmlns:dcmi="http://purl.org/dc/dcmitype/">
+  <Address xml:id="address_1">
+    <properties>
+      <city>Christchurch</city>
+      <suburb></suburb>
+      <po_box>1100</po_box>
+      <street_name>Wairakei Road</street_name>
+      <street_number>540</street_number>
+      <postcode></postcode>
+      <placename></placename>
+    </properties>
+    <relations>
+      <hasPosition idref="#position_1"></hasPosition>
+    </relations>
+  </Address>
+</content>

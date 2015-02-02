@@ -1,0 +1,820 @@
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script><script type="text/javascript">
+            $(document).ready(function(){            	
+            	$("p.trigger").click(function(){
+            	   $(".toggle_container").slideToggle("slow");
+            	   $(this).toggleClass("active");
+            	});
+            	$("h3.trigger").click(function(){
+            		$(this).toggleClass("active").next().slideToggle("slow");
+            	});
+            });
+        </script><style>
+            body {
+                font-family: tahoma, verdana, sans-serif;
+            }
+            div.nav {
+                font-size: smaller;
+                text-align: center;                
+            }
+            div.main {
+                width: 800px;
+                margin: 0 auto;
+            }
+            div.class_name {
+                color: #ff6600;
+            }
+            h1 {
+            	font-size: 2em;
+            }
+            h2 {
+            	font-size: 1.5em;
+            }
+            h3 {
+                margin-bottom: 0.5em;
+            }
+            h3.trigger {
+            	font-size: 1.2em;
+            }
+            h3.trigger a {
+            	text-decoration: none;
+            }
+            h3.trigger a:hover {
+            	color: #ccc;
+            }
+            h3.active {background-position: left bottom;}
+            .toggle_container {
+            	overflow: hidden;
+            }
+            ul {
+                margin-top: 0em;
+            }
+            table.element {
+                width: 100%;
+                border-collapse:collapse;
+                -moz-border-radius: 15px;
+                border-radius: 15px;
+                background-color: #ddeeff;
+                margin-bottom: 1em;
+                padding: 0.5em;
+            }
+            table tr:first-child td:first-child {
+                -moz-border-radius-topleft:10px;
+                -webkit-border-top-left-radius:10px;
+                border-top-left-radius:10px
+            }
+            table tr:first-child td:last-child {
+                -moz-border-radius-topright:10px;
+                -webkit-border-top-right-radius:10px;
+                border-top-right-radius:10px
+            }
+            table tr:last-child td:first-child {
+                -moz-border-radius-bottomleft:10px;
+                -webkit-border-bottom-left-radius:10px;
+                border-bottom-left-radius:10px
+            }
+            table tr:last-child td:last-child {
+                -moz-border-radius-bottomright:10px;
+                -webkit-border-bottom-right-radius:10px;
+                border-bottom-right-radius:10px
+            }
+            td {
+                padding: 0.5em;
+                border-bottom: 1px dotted #77bbff;
+            }
+            table tr:last-child td {
+                border-bottom: none;
+            }
+            tr.element_name td {
+                font-size: 1em;
+                color: #ffffff;
+                font-weight: bold;
+                background-color: #444444;
+            }
+            table tr td:first-child {
+                width: 25%;
+            }
+            table tr td:last-child {
+                width: 1em;
+            }
+            td.automatable {
+                background:green;
+            }
+            td.automatable a {
+                color:green;
+            }
+            td.manual {
+                background:red;
+                color:red;
+            }
+            td.manual a {
+                color:red;
+            }
+        </style><body xmlns:qsr="http://quakestudies.canterbury.ac.nz">
+   <div class="main">
+      <div class="nav">
+         <p class="trigger"><a href="#">toggle all</a></p>
+      </div>
+      <h1>Quakestudies Repository: Schema description</h1>
+      <div class="class_name">
+         <h3 class="trigger"><a href="#">Format</a></h3>
+         <div class="toggle_container">
+            <table class="element">
+               <tr>
+                  <td colspan="2">&lt;Format&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mime_type/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;format_type/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&lt;/Format&gt;</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="class_name">
+         <h3 class="trigger"><a href="#">DateTime</a></h3>
+         <div class="toggle_container">
+            <table class="element">
+               <tr>
+                  <td colspan="2">&lt;DateTime&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;point_datetime_zone/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;point_datetime_type/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;point_datetime/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&lt;/DateTime&gt;</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="class_name">
+         <h3 class="trigger"><a href="#">Collection</a></h3>
+         <div class="toggle_container">
+            <table class="element">
+               <tr>
+                  <td colspan="2">&lt;Collection&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;collection_name/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;display_collection_name/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;isPublishedBy/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;isCollectedInto/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&lt;/Collection&gt;</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="class_name">
+         <h3 class="trigger"><a href="#">Role</a></h3>
+         <div class="toggle_container">
+            <table class="element">
+               <tr>
+                  <td colspan="2">&lt;Role&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;role_name/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;role_level/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;isConstituentRoleOf/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&lt;/Role&gt;</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="class_name">
+         <h3 class="trigger"><a href="#">Part</a></h3>
+         <div class="toggle_container">
+            <table class="element">
+               <tr>
+                  <td colspan="2">&lt;Part&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source_url/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;thumbnail_url/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;copyright_name/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;landing_url/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;extent/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;language/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;description/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;creator_credit/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasAvailability/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;isPartOf/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasFormat/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasRelationshipToEvent/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasCreatorParty/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&lt;/Part&gt;</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="class_name">
+         <h3 class="trigger"><a href="#">Event</a></h3>
+         <div class="toggle_container">
+            <table class="element">
+               <tr>
+                  <td colspan="2">&lt;Event&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;event_type/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;event_name/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasEndDateTime/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasStartDateTime/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&lt;/Event&gt;</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="class_name">
+         <h3 class="trigger"><a href="#">Object</a></h3>
+         <div class="toggle_container">
+            <table class="element">
+               <tr>
+                  <td colspan="2">&lt;Object&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;object_identifier/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;object_thumbnail_url/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;object_content/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;object_url/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;seo_text/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;description/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;creator_credit/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasContributorParty/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasSourceParty/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasCategory/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasRelationshipToEvent/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;isCollectedInto/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasCreatorParty/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasAddress/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&lt;/Object&gt;</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="class_name">
+         <h3 class="trigger"><a href="#">Address</a></h3>
+         <div class="toggle_container">
+            <table class="element">
+               <tr>
+                  <td colspan="2">&lt;Address&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;suburb/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;postcode/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;placename/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;po_box/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;street_number/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;city/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;street_name/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasPosition/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&lt;/Address&gt;</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="class_name">
+         <h3 class="trigger"><a href="#">Person</a></h3>
+         <div class="toggle_container">
+            <table class="element">
+               <tr>
+                  <td colspan="2">&lt;Person&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;display_person_name/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;terms_of_address/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;forenames/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;surname/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;isTypeOfParty/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&lt;/Person&gt;</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="class_name">
+         <h3 class="trigger"><a href="#">Category</a></h3>
+         <div class="toggle_container">
+            <table class="element">
+               <tr>
+                  <td colspan="2">&lt;Category&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;category_name/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;category_domain/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;seo_text/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasCategory/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&lt;/Category&gt;</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="class_name">
+         <h3 class="trigger"><a href="#">ContentPartner</a></h3>
+         <div class="toggle_container">
+            <table class="element">
+               <tr>
+                  <td colspan="2">&lt;ContentPartner&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;content_partner_name/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;display_content_partner_name/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&lt;/ContentPartner&gt;</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="class_name">
+         <h3 class="trigger"><a href="#">Version</a></h3>
+         <div class="toggle_container">
+            <table class="element">
+               <tr>
+                  <td colspan="2">&lt;Version&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;isVersionOf/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasStartDateTime/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&lt;/Version&gt;</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="class_name">
+         <h3 class="trigger"><a href="#">License</a></h3>
+         <div class="toggle_container">
+            <table class="element">
+               <tr>
+                  <td colspan="2">&lt;License&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;license_name/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;license_description/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;license_provenance/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;rights_url/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&lt;/License&gt;</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="class_name">
+         <h3 class="trigger"><a href="#">Party</a></h3>
+         <div class="toggle_container">
+            <table class="element">
+               <tr>
+                  <td colspan="2">&lt;Party&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;party_url/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;party_social_username/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;party_name/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;party_phone_number/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;party_social_type/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;party_display_name/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;party_email/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;isMemberOfRole/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;isMemberOfContentPartner/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasAddress/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&lt;/Party&gt;</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="class_name">
+         <h3 class="trigger"><a href="#">Availability</a></h3>
+         <div class="toggle_container">
+            <table class="element">
+               <tr>
+                  <td colspan="2">&lt;Availability&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;availability_name/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasLicense/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;isAvailableTo/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasEndDateTime/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasStartDateTime/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&lt;/Availability&gt;</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="class_name">
+         <h3 class="trigger"><a href="#">Audience</a></h3>
+         <div class="toggle_container">
+            <table class="element">
+               <tr>
+                  <td colspan="2">&lt;Audience&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;audience_name/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;isAudienceFor/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;hasConstituentRole/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&lt;/Audience&gt;</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div class="class_name">
+         <h3 class="trigger"><a href="#">Position</a></h3>
+         <div class="toggle_container">
+            <table class="element">
+               <tr>
+                  <td colspan="2">&lt;Position&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;longitude/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;location/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;latitude/&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/properties&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/relations&gt;</td>
+               </tr>
+               <tr>
+                  <td colspan="2">&lt;/Position&gt;</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </div>
+</body>

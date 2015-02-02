@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns="http://quakestudies.canterbury.ac.nz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://quakestudies.canterbury.ac.nz ../qsr.xsd" xmlns:dcmi="http://purl.org/dc/dcmitype/">
+  <Audience xml:id="audience_1">
+    <properties>
+      <audience_name>All</audience_name>
+    </properties>
+    <relations>
+      <hasConstituentRole idref="#role_1"></hasConstituentRole>
+    </relations>
+  </Audience>
+</content>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Quakestudies Repository: user documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- note that the custom stylesheet overrides some of the CSS in the above stylesheets. -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+
+    <!-- <div class="navbar navbar-fixed-top"> -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Quakestudies Repository: user documentation</a>
+            <ul class="nav">
+              <li class="dropdown"><a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Ontology <b class="caret"></b></a>
+              	<ul class="dropdown-menu">
+									<li><a href="index.html">Ontology documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="introduction.html">Ontology introduction</a></li>
+									<li><a href="../owl/ceismic.owl">OWL-RDF ontology</a></li>
+									<li><a href="ontology.html">Ontology description</a></li>
+									<li><a href="vocabularies.html">Vocabularies</a></li>
+									<li><a href="../owl/ceismic.gif">Ontology diagram</a></li>
+									<li><a href="mappings.html">Mappings</a></li>
+              	</ul>
+              </li>
+              <li class="dropdown"><a href="user.html" class="dropdown-toggle" data-toggle="dropdown">System <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="system.html">System documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="system.html#architecture">Architecture</a></li>
+				          <li><a href="system.html#administration_interfaces">Administration interfaces</a></li>
+				          <li><a href="system.html#authentication">Authentication</a></li>
+				          <li><a href="system.html#authorisation">Authorisation</a></li>
+								</ul>
+							</li>
+              <li class="active dropdown"><a href="user.html" class="dropdown-toggle" data-toggle="dropdown">User <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="user.html">User documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="user.html#roles">Roles</a></li>
+									<li><a href="user.html#workflows">Workflows</a></li>
+									<li><a href="user.html#bulk_ingest">Generic bulk ingest</a></li>
+									<li><a href="user.html#fedora_vocab">Fedora Vocabulary</a></li>
+								</ul>
+							</li>
+              <li class="dropdown"><a href="api.html" class="dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="api.html">API documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="api.html#Introduction">Introduction</a></li>
+									<li><a href="api.html#ResourceIndexSearch">Resource index search</a></li>
+									<li><a href="api.html#RESTAPI">REST API</a></li>
+								</ul>
+							</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit" style="position: relative;">
+      		<div>
+						<img src="assets/eq-info.jpg" width="200"/>
+					</div>
+      		<div style="position: absolute; left: 300px; top: 52px;">
+						<h1>QSR user documentation</h1>
+						<p>Documentation for users of the Quakestudies repository. 
+						</p>
+						<!--
+						<p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+						-->
+					</div>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+
+        <div class="span3">
+					<ul>
+						<li>
+							<a href="#roles">Roles</a>
+							<ul>
+								<li><a href="#role_drupal_administrator">Drupal administrator</a></li>
+								<li><a href="#role_quakestudies_superuser">Quakestudies superuser</a></li>
+								<li><a href="#role_quakestudies_approver">Quakestudies approver</a></li>
+								<li><a href="#role_quakestudies_content_loader">Quakestudies content loader</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#workflows">Workflows</a>	
+							<ul>
+								<li>
+									<a href="#user_registration_workflow">User registration workflow</a>
+								</li>
+								<li>
+									<a href="#content_workflows">Content workflows</a>
+									<ul>
+										<li><a href="#content_ingestion">Content ingestion</a></li>
+										<li><a href="#content_consumption">Content consumption</a>
+											<ul>
+												<li><a href="#via_drupal">via Drupal</a></li>
+												<li><a href="#via_apis">via APIs</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li><a href="#content_ingestion_workflow">Content ingestion workflow</a>
+									<ul>
+										<li><a href="#ingestion_approval_workflow">Ingestion and approval workflow</a></li>
+										<li><a href="#ingestion_class_dependencies">Ingestion class dependencies</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#bulk_ingest">Generic bulk ingest</a>	
+							<ul>
+								<li>
+									<a href="#bulk_ingest_usage">Usage</a>
+								</li>
+								<li>
+									<a href="#bulk_ingest_manifest">Manifest file format</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#fedora_vocab">Fedora Vocabulary</a>	
+							<ul>
+								<li>
+									<a href="#fedora_vocab_usage">Usage</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+        <div class="span8">
+					<h1><a name="roles"></a>Roles</h1>
+					<ul class="thumbnails">
+						<li class="span8">
+							<a href="assets/user_roles.png" class="thumbnail">
+								<img src="assets/user_roles.png" />
+							</a>
+						</li>
+					</ul>
+					
+					<p>The Quakestudies permissions model is based upon the following roles:
+
+					<h3><a name="role_drupal_administrator" href="#"></a>Drupal administrator</h3>
+					<p>The Drupal administrator role allows control over all aspects of the configuration and maintenance of the Drupal installation via the Quakestudies Drupal interface.
+					It is recommended that this role be reserved for CWA staff only.</p>
+
+					<h3><a name="role_quakestudies_superuser" href="#"></a>Quakestudies Superuser</h3>
+					<p>The Quakestudies Superuser role is for use by the main Quakestudies administrator, and allows the following:
+						<ol>
+							<li>Assignment (and removal) of users to the Quakestudies Approver and Quakestudies Content Loader roles.</li>
+							<li>
+								Creation of instances of top-level supporting classes where there may be issues of sensitivity or authorisation (e.g. <b>Role</b>, <b>Audience</b>) or where there may be issues of standardisation and where only occasional maintenance is anticipated (e.g. <b>Format</b>), including:
+								<ul>
+									<li>Audience</li>
+									<li>Content Partner</li>
+									<li>Collection</li>
+									<li>Role</li>
+									<li>Format</li>
+									<li>Category</li>
+									<li>Event</li>
+								</ul>
+							</li>
+							<li>The ability to perform all functions available to the Quakestudies Approver and Quakestudies Content Loader roles.</li>
+						</ol>
+					</p>
+
+					<h3><a name="role_quakestudies_approver" href="#"></a>Quakestudies Approver</h3>
+					<p>The Quakestudies Approver role is for general Quakestudies administrators, and allows the following:
+						<ol>
+							<li>Approval of <b>Object</b> and <b>Part</b> instances created by Quakestudies Content Loaders, such that the content is made available to the desired <b>Audience</b> via the Quakestudies Drupal front-end.
+							This is accomplished through creation of an instance of the <b>Availability</b> class and association with <b>License</b> and <b>Parts</b>.</li>
+							<li>The ability to perform all functions available to the Quakestudies Content Loader role.</li>
+						</ol>
+					</p>
+
+					<h3><a name="role_quakestudies_content_loader" href="#"></a>Quakestudies Content Loader</h3>
+					<p>The Quakestudies Content Loader role is for all Quakestudies staff engaged in ingesting general content, and allows the following:
+						<ul>
+							<li>
+								The ability to create instances of general supporting classes where there are not major issues of sensitivity, authorisation or standardisation including:
+								<ul>
+									<li>Party</li>
+									<li>Address</li>
+									<li>Person</li>
+									<li>Position</li>
+								</ul>
+							</li> 
+							<li>The ability to create instances of <b>Object</b> and <b>Part</b>, allowing for the ingest of general content.</li>
+						</ul>
+					</p>
+
+					<hr />
+					<h1><a name="workflows" href="#"></a>Workflows</h1>
+
+					<h2><a name="user_registration_workflow" href="#"></a>User registration workflow</h2>
+					<ul class="thumbnails">
+						<li class="span8">
+							<a href="assets/user_registration_workflow.png" class="thumbnail">
+								<img src="assets/user_registration_workflow.png" />
+							</a>
+						</li>
+					</ul>
+					<p>The user registration workflow is based upon the following sequence of events:
+						<ul>
+							<li>All public users should be able to view certain content without having to login.</li>
+							<li>However, when a user wants to access functionality not available to public users, they will be prompted to login.</li>
+							<li>A user who attemtps to login, but who is not recognised as an existing Quakestudies Repository user, will have their credentials authenticated against the University of Canterbury LDAP server.</li>
+							<li>Should the user credentials be recognised, the superuser will be notified that a user has applied for membership.</li>
+							<li>Until the superuser approves the user's application, the user will only be able to perform functionality available to public users.</li>
+							<li>Once the superuser has assigned the user to the appropriate role (<b>superuser</b>, <b>approver</b>, or <b>content loader</b>), the superuser will then notify the user of their role activation</li>
+							<li>The user will then be able to login to the Quakestudies Repository and gain access to functionality for their assigned role.</li>
+						</ul>
+					</p>
+
+					<h2><a name="content_workflows" href="#"></a>Content workflows</h2>
+					<ul class="thumbnails">
+						<li class="span8">
+							<a href="assets/ingestion_consumption_workflows.png" class="thumbnail">
+								<img src="assets/ingestion_consumption_workflows.png" />
+							</a>
+						</li>
+					</ul>
+					<p>The differences between content ingestion and consumption should be noted:
+					</p>
+					
+					<h3><a name="content_ingestion" href="#"></a>Content ingestion</h3>
+					<p>
+						<ul>
+							<li>Content ingestion relies on the user creating content via the Drupal interface, which is then submitted to Fedora</li>
+							<li>The Resource Index will be queried as part of the content ingestion process in order to provide details of supporting classes to the user, such
+							that they can associate the appropriate supporting classes with the content.</li>
+							<li>Note that upon ingest of the content into Fedora, details are passed to Fedora Generic Search which then distills the details and populates the Solr search server appropriately.</li>
+						</ul>
+					</p>
+					<h3><a name="content_consumption" href="#"></a>Content consumption</h3>
+					<h4><a name="via_drupal" href="#"></a>via Drupal</h4>
+					<p>
+						<ul>
+							<li>Content discovery via Drupal typically relies on services provided by both of Solr and the Resource Index</li>
+							<li>Fedora Generic Search is not involved in content consumption</li>
+						</ul>
+					</p>
+					<h4><a name="via_apis" href="#"></a>via APIs</h4>
+					<p>
+						<ul>
+							<li>Content discovery via the Fedora APIs typically relies on services provided by both of Solr and the Resource Index</li>
+							<li>Content consumption via the Fedora APIs does not require Drupal</li>
+						</ul>
+					</p>
+
+					<h2><a name="content_ingestion_workflow" href="assets/content_creation_workflow.png"></a>Content ingestion workflow</h2>
+					<h3><a name="ingestion_approval_workflow" href="#"></a>Ingestion and approval workflow</h3>
+					<p>The visual representation of the workflow for ingesting content into the Quakestudies Repository.</p>
+					<ul class="thumbnails">
+						<li class="span8">
+							<a href="assets/content_approval_workflow.png" class="thumbnail">
+								<img src="assets/content_approval_workflow.png" />
+							</a>
+						</li>
+					</ul>
+					<h4>Notes:</h4>
+					<ol>
+						<li>Instances and Parts are only considered as "published" (i.e. browsable via the Quakestudies Drupal Repository front-end by the appropriate <b>Audience</b>) once they have been approved by the Quakestudies Approver.</li>
+						<br />
+						<li>This approval step functions as follows:
+							<ul>
+								<li>When creating <b>Object</b> and <b>Part</b> instances, <b>Quakestudies Content Loaders</b> can create a <b>License</b> but cannot create or apply an <b>Availability</b>. Without an <b>Availability</b>, content is not available for browsing via the Quakestudies Repository Drupal front-end.</li>
+								<li>A <b>Quakestudies Approver</b> is able to view a report of all content (<b>Objects</b> and associated <b>Parts</b>) that do not have any assigned <b>Availability</b>, and assign them an <b>Availability</b> that makes the content available to the appropriate <b>Audience</b>, and associate the <b>Availability</b> with a <b>License</b>.</li>
+							</ul>
+						</li>
+					</ol>
+
+					<h3><a name="ingestion_class_dependencies" href="#"></a>Ingestion class dependencies</h3>
+					<p>The visual representation of the dependencies between the classes in the Quakestudies ontology when ingesting content into the Quakestudies Repository.</p>
+					<ul class="thumbnails">
+						<li class="span8">
+							<a href="assets/content_creation_workflow.png" class="thumbnail">
+								<img src="assets/content_creation_workflow.png" />
+							</a>
+						</li>
+					</ul>
+					<h4>Notes:</h4>
+					<ul>
+						<li>Instances of certain classes (e.g. <b>Format, Collection, Content Partner, Role, Event, Category</b>) must be created by a user with the appropriate privileges (the <b>Quakestudies Superuser</b>). It is expected that the creation of these instances will be required only occasionaly.</li>
+						<li>Instances of other supporting classes (e.g. <b>Party, Person, Address</b>) can be created by a user with lesser privileges (the <b>Quakestudies Content Loader</b>), but these <b>must</b> be created prior to creation of the various <b>Objects</b> and associated <b>Parts</b> instances.</li>
+					</ul>
+					
+					<h1><a name="bulk_ingest"></a>Generic bulk ingest</h1>
+					<p>The QuakeStudies generic bulk ingest module allows content to be specified for ingest into the QuakeStudies repository using a generic format. A CSV file specifies the content items to be ingested. Each content item can be a file of any type &mdash; some types such as images will be rendered within the QuakeStudies site, while others can be downloaded and viewed.</p>
+
+					<h3><a name="bulk_ingest_usage"></a>Usage</h3>
+					<p>The bulk ingest module expects content to be stored in a directory structure on the QuakeStudies server. Files should be uploaded at <b>/mnt/bulk-ingest</b>.</p>
+					<p>In the top level folder a file <b>manifest.csv</b> is expected (the spelling and capitalisation must be exact). This will be a CSV file as specified below. Content files are expected to be in this folder or in subfolders.</p>
+					<p>Users of Bulk Ingest should have at least the <b><a href="#role_quakestudies_content_loader">Quakestudies Content Loader</a></b> roles at both the Fedora and Drupal level.</p>
+					<p>To use Generic Bulk Ingest, you should first create a Batch object. This groups content together and allows the same content to be ingest multiple times without creating duplicates &mdash; for instance, to refine and correct file and manifest contents.</p>
+					<p>You may also create related objects such as availability that are referred to from the bulk ingest manifest (see below).</p>
+					<p>To start a bulk ingest, go to the <b>Navigation/QSR Bulk Ingest</b> menu option:</p>
+					<ul class="thumbnails">
+						<li class="span8">
+							<a href="assets/bulk_ingest_menu.png" class="thumbnail">
+								<img src="assets/bulk_ingest_menu.png" />
+							</a>
+						</li>
+					</ul>
+					<ol>
+						<li><p>Under <b>Batch</b> select the batch object you are using. Enter the directory path where your <b>manifest.csv</b> file is stored. For example, if a subfolder called <b>files</b> was created in the <b>mnt/bulk-ingest</b> folder, then <b>/mnt/bulk-ingest/files</b> would be the path entered into the <b>Select server folder to ingest from</b> field.</p></li>
+						<li><p>Select a bulk ingest type of <b>Generic Bulk Ingest</b></p></li>
+						<li><p>Click <b>Start ingest</b>.</p></li>
+					</ol>
+					<p>The process may take some time to run depending on the amount of content being ingested.</p>
+					<h3><a name="bulk_ingest_manifest"></a>Manifest file format</h3>
+					<p>The manifest file is in <a href="http://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> format.</p>
+						<ul>
+							<li>Cells which contain a comma should be quoted with double quotes: e.g. <i>"fish, chips"</i>.</li>
+							<li>Quotes should be escaped by a backslash, e.g. <i>"Hello \"world\""</i>.</li>
+							<li>The backslash should be escaped by itself.</li>
+						</ul>
+					<p>Using Microsoft Excel with default settings, and saving the file as CSV will mean these rules are followed.</p>
+					<p>The table below provides an example of the file format:</p>
+					<table style="font-size:smaller;">
+					<tr><th>*Path</th><th>#availability/field_dc_title</th><th>object/field_dc_title</th><th>object/field_dc_description</th><th>part/field_dc_title</th><th>part/field_dc_description</th></tr>
+					<tr><td>collA/PartA1_1.pdf</td><td>Test availability for ingest</td><td>Test Object 1</td><td>This is "test" object 1</td><td>Test part A/1/1</td><td>This is part A/1/1</td></tr>
+					<tr><td>collA/PartA1_2.pdf</td><td></td><td></td><td></td><td>Test part A/1/2</td><td>This is part A/1/2</td></tr>
+					<tr><td>collA/PartA1_3.pdf</td><td>Public</td><td></td><td></td><td>Test part A/1/3</td><td>This is part A/1/3</td></tr>
+					</table>
+					<p>This CSV file, when examined in a plain text editor, will look like the following:</p>
+					<pre>
+*Path,#availability/field_dc_title,object/field_dc_title,object/field_dc_description,part/field_dc_title,part/field_dc_description
+collA/PartA1_1.pdf,Test availability for ingest,Test Object 1,"This is ""test"" object 1",Test part A/1/1 ,This is part A/1/1
+collA/PartA1_2.pdf,,,,Test part A/1/2,This is part A/1/2
+collA/PartA1_3.pdf,Public,,,Test part A/1/3,This is part A/1/3
+					</pre>
+					<p>Using this manifest.csv file will result in the following structure of repository objects:</p>				
+					<ul class="thumbnails">
+						<li class="span8">
+							<a href="assets/manifest_file.png" class="thumbnail">
+								<img src="assets/manifest_file.png" />
+							</a>
+						</li>
+					</ul>
+					<h4>Notes</h4>
+					<ul>
+						<li><p>The first line of the CSV file is the header row, which specifies processing instructions for the data rows following below.</p></li>
+						<li><p>There <b><i>must</i></b> be one column with a <b>*Path</b> header. This specifies the path names of each content file to be processed. Path names can be absolute or relative (to the <b>manifest.csv</b> location). They should follow Unix forward slash conventions.</p></li>
+						<li><p>Field columns are specified as <b>class_type/field_name</b>. Class types can be any of the QuakeStudies classes, such as <b>part</b>, <b>object</b>, <b>format</b> etc. Field names can be displayed within QuakeStudies by going to <b>Administration/Structure/Manage Fedora Entities/Manage ...</b>  and selecting <b>Manage Fields</b>.</p></li>
+						<li><p>The manifest file must define a part with a title (e.g: <b>part/field_dc_title</b>) and may also specify other fields for the part.</p></li>
+						<li><p>Other class instances can also be defined and will be linked to the part using the most appropriate relation. All instances will be created and linked together.</p></li>
+						<li><p>When it is required to have a single class instance linked to multiple parts (as in the diagram above), the instance should be made shared. This is done by prefixing a key field with a # (e.g. <b>#object/field_dc_title</b>). The ingest process will then use an instance with a matching key value (if such an instance exists) rather than creating a new instance. Only one key field can be specified, but any number of non-key fields can also be provided for use when a new class instance is created.</p></li>
+						<li><p>Each row of the spreadsheet corresponds to a file being ingested and a part being created. Path names are specified in the <b>*Path</b> column. Data values should be in a valid format for the type &mdash; in particular, date values follow the <a href="http://php.net/manual/en/function.strtotime.php">PHP strtotime format</a>: <i>2012-5-28</i>, <i>28-5-2012</i> and <i>5/28/12</i> are valid. Hyphens should be used in DD-MM-YYYY dates.</p></li>
+						<li><p>Where the same value is required for multiple rows, fields can be left blank and will then assume the value of the previously populated field above (in the same column). If a field is required to be set to null, the text <i>&lt;null&gt;</i> will accomplish this. Therefore, in the case where you want many objects in the same collection, you may name your collection in the first row and then leave the same column field in following rows empty.</p></li>
+					</ul>
+					
+					
+					
+					<h1><a name="fedora_vocab"></a>Fedora Vocabulary</h1>
+					<p>The Fedora Vocabulary module displays a list of Vocabulary Sections and Vocabulary Items and tools for adding, editing and deleting Vocabulary Items</p>
+					<p>You will find it under Administration/Structure/Fedora Vocabulary.  </p>
+
+					<h3><a name="fedora_vocab_usage"></a>Usage</h3>
+					
+					<p>To view a list of Vocabulary Items, click on one of the Vocabulary Sections.</p>
+
+					<p>To add a Vocabulary Item, use the "Add New Vocabulary Item" form at the bottom of the page, the 
+					When one of the Vocabulary Sections is clicked on, a list of Vocabulary Items within that section is displayed, along with a form for adding new Vocabulary Items.</p>
+
+
+					<p>To edit or delete a Vocabulary Item, click on one of them, the page will display a form where the name can be changed and buttons for Saving the changes or Deleting the item.</p>
+
+					<p>If the Vocabulary Item is currently in use, the delete button will be greyed out, you will need to remove the item from all fedora objects that use it before deleting it.</p>
+							
+					<!--
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+          -->
+       </div>
+      </div>
+
+      <hr>
+
+      <footer>
+				<p>© 2012 <a href="http://www.canterbury.ac.nz/">University of Canterbury</a>. All rights reserved.</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

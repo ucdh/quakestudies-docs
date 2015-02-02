@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns="http://quakestudies.canterbury.ac.nz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://quakestudies.canterbury.ac.nz ../qsr.xsd" xmlns:dcmi="http://purl.org/dc/dcmitype/">
+  <Part xml:id="part_1">
+    <properties>
+      <extent>2:35</extent>
+      <language>en</language>
+      <source>CTV Video submitted to YouTube</source>
+      <source_url>http://www.youtube.com/v/I-XpS3NMFVU?version=3&amp;feature=player_detailpage</source_url>
+      <landing_url>http://www.youtube.com/watch?v=I-XpS3NMFVU</landing_url>
+      <thumbnail_url>http://i2.ytimg.com/vi/I-XpS3NMFVU/default.jpg</thumbnail_url>
+      <copyright_name>Standard YouTube License</copyright_name>
+      <description></description>
+      <title></title>
+      <creator_credit></creator_credit>
+    </properties>
+    <relations>
+      <isPartOf idref="#object_1"></isPartOf>
+      <hasFormat idref="#format_1"></hasFormat>
+      <hasAvailability idref="#availability_1"></hasAvailability>
+      <hasRelationshipToEvent idref="#event_1"></hasRelationshipToEvent>
+      <hasCreatorParty></hasCreatorParty>
+    </relations>
+  </Part>
+</content>

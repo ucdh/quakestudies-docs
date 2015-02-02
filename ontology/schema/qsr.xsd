@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:qsr="http://quakestudies.canterbury.ac.nz" xmlns:dcmi="http://purl.org/dc/dcmitype/" elementFormDefault="qualified" targetNamespace="http://quakestudies.canterbury.ac.nz">
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+  <xs:import namespace="http://purl.org/dc/dcmitype/" schemaLocation="http://dublincore.org/schemas/xmls/qdc/dcmitype.xsd"/>
+  <xs:element name="content">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="qsr:Format" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="qsr:Audience" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="qsr:Collection" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="qsr:DateTime" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="qsr:Part" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="qsr:Role" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="qsr:Address" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="qsr:Object" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="qsr:Availability" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="qsr:Category" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="qsr:Event" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="qsr:Person" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="qsr:Party" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="qsr:License" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="qsr:Position" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="qsr:ContentPartner" minOccurs="0" maxOccurs="1"/>
+      </xs:all>
+      <xs:attribute name="origin"/>
+      <xs:attribute name="url"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Format">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="qsr:properties" maxOccurs="1"/>
+        <xs:element ref="qsr:relations" maxOccurs="1"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Audience">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="qsr:properties" maxOccurs="1"/>
+        <xs:element ref="qsr:relations" maxOccurs="1"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Collection">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="qsr:properties" maxOccurs="1"/>
+        <xs:element ref="qsr:relations" maxOccurs="1"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DateTime">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="qsr:properties" maxOccurs="1"/>
+        <xs:element ref="qsr:relations" maxOccurs="1"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Part">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="qsr:properties" maxOccurs="1"/>
+        <xs:element ref="qsr:relations" maxOccurs="1"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Role">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="qsr:properties" maxOccurs="1"/>
+        <xs:element ref="qsr:relations" maxOccurs="1"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Address">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="qsr:properties" maxOccurs="1"/>
+        <xs:element ref="qsr:relations" maxOccurs="1"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Object">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="qsr:properties" maxOccurs="1"/>
+        <xs:element ref="qsr:relations" maxOccurs="1"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Availability">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="qsr:properties" maxOccurs="1"/>
+        <xs:element ref="qsr:relations" maxOccurs="1"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Category">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="qsr:properties" maxOccurs="1"/>
+        <xs:element ref="qsr:relations" maxOccurs="1"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Event">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="qsr:properties" maxOccurs="1"/>
+        <xs:element ref="qsr:relations" maxOccurs="1"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Person">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="qsr:properties" maxOccurs="1"/>
+        <xs:element ref="qsr:relations" maxOccurs="1"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Party">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="qsr:properties" maxOccurs="1"/>
+        <xs:element ref="qsr:relations" maxOccurs="1"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="License">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="qsr:properties" maxOccurs="1"/>
+        <xs:element ref="qsr:relations" maxOccurs="1"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Position">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="qsr:properties" maxOccurs="1"/>
+        <xs:element ref="qsr:relations" maxOccurs="1"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContentPartner">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="qsr:properties" maxOccurs="1"/>
+        <xs:element ref="qsr:relations" maxOccurs="1"/>
+      </xs:all>
+      <xs:attribute ref="xml:id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="properties">
+    <xs:complexType>
+      <xs:choice>
+        <xs:sequence>
+          <xs:element ref="qsr:format_title"/>
+          <xs:element ref="qsr:format_description"/>
+          <xs:element ref="qsr:mime_type"/>
+          <xs:element ref="qsr:format_type"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:audience_title"/>
+          <xs:element ref="qsr:audience_description"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:collection_description"/>
+          <xs:element ref="qsr:collection_display_title"/>
+          <xs:element ref="qsr:collection_title"/>
+          <xs:element ref="qsr:collection_thumbnail"/>
+          <xs:element ref="qsr:version"/>
+          <xs:element ref="qsr:tags"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:point_datetime_description"/>
+          <xs:element ref="qsr:point_datetime_title"/>
+          <xs:element ref="qsr:point_datetime_type"/>
+          <xs:element ref="qsr:point_datetime"/>
+          <xs:element ref="qsr:point_datetime_zone"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:source_url"/>
+          <xs:element ref="qsr:copyright_name"/>
+          <xs:element ref="qsr:part_description"/>
+          <xs:element ref="qsr:landing_url"/>
+          <xs:element ref="qsr:source"/>
+          <xs:element ref="qsr:part_thumbnail"/>
+          <xs:element ref="qsr:language"/>
+          <xs:element ref="qsr:part_creation_date"/>
+          <xs:element ref="qsr:part_title"/>
+          <xs:element ref="qsr:original_filename"/>
+          <xs:element ref="qsr:extent"/>
+          <xs:element ref="qsr:derivative_type"/>
+          <xs:element ref="qsr:creator_credit"/>
+          <xs:element ref="qsr:weight"/>
+          <xs:element ref="qsr:version"/>
+          <xs:element ref="qsr:tags"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:role_title"/>
+          <xs:element ref="qsr:role_description"/>
+          <xs:element ref="qsr:role_level"/>
+          <xs:element ref="qsr:role_access"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:address_description"/>
+          <xs:element ref="qsr:placename"/>
+          <xs:element ref="qsr:postcode"/>
+          <xs:element ref="qsr:address_priority"/>
+          <xs:element ref="qsr:address_title"/>
+          <xs:element ref="qsr:suburb"/>
+          <xs:element ref="qsr:street_name"/>
+          <xs:element ref="qsr:city"/>
+          <xs:element ref="qsr:po_box"/>
+          <xs:element ref="qsr:street_number"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:object_creation_date"/>
+          <xs:element ref="qsr:object_remote_identifier"/>
+          <xs:element ref="qsr:object_title"/>
+          <xs:element ref="qsr:"/>
+          <xs:element ref="qsr:object_thumbnail"/>
+          <xs:element ref="qsr:creator_credit"/>
+          <xs:element ref="qsr:weight"/>
+          <xs:element ref="qsr:seo_text"/>
+          <xs:element ref="qsr:version"/>
+          <xs:element ref="qsr:tags"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:availability_description"/>
+          <xs:element ref="qsr:availability_title"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:category_description"/>
+          <xs:element ref="qsr:category_title"/>
+          <xs:element ref="qsr:category_domain"/>
+          <xs:element ref="qsr:seo_text"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:event_title"/>
+          <xs:element ref="qsr:event_description"/>
+          <xs:element ref="qsr:event_type"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:person_title"/>
+          <xs:element ref="qsr:forenames"/>
+          <xs:element ref="qsr:surname"/>
+          <xs:element ref="qsr:person_description"/>
+          <xs:element ref="qsr:person_display_title"/>
+          <xs:element ref="qsr:terms_of_address"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:party_email"/>
+          <xs:element ref="qsr:party_social_username"/>
+          <xs:element ref="qsr:party_social_type"/>
+          <xs:element ref="qsr:party_title"/>
+          <xs:element ref="qsr:party_display_title"/>
+          <xs:element ref="qsr:party_phone_number"/>
+          <xs:element ref="qsr:party_foreign_uri"/>
+          <xs:element ref="qsr:party_url"/>
+          <xs:element ref="qsr:party_foreign_identifier"/>
+          <xs:element ref="qsr:party_description"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:license_description"/>
+          <xs:element ref="qsr:license_title"/>
+          <xs:element ref="qsr:rights_url"/>
+          <xs:element ref="qsr:license_provenance"/>
+          <xs:element ref="qsr:license_document"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:position_description"/>
+          <xs:element ref="qsr:location"/>
+          <xs:element ref="qsr:longitude"/>
+          <xs:element ref="qsr:latitude"/>
+          <xs:element ref="qsr:position_title"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:content_partner_description"/>
+          <xs:element ref="qsr:content_partner_title"/>
+          <xs:element ref="qsr:content_partner_display_title"/>
+        </xs:sequence>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="format_title" type="xs:string"/>
+  <xs:element name="format_description" type="xs:string"/>
+  <xs:element name="mime_type" type="qsr:type_mime_type"/>
+  <xs:simpleType name="type_mime_type">
+    <xs:restriction base="xs:string">
+      <!--<xs:enumeration value="application/x-shockwave-flash"/>-->
+      <xs:pattern value="[-a-z]*/[-+a-z0-9]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="format_type" type="dcmi:DCMIType"/>
+  <xs:simpleType name="type_format_type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Collection"/>
+      <xs:enumeration value="Event"/>
+      <xs:enumeration value="MovingImage"/>
+      <xs:enumeration value="PhysicalObject"/>
+      <xs:enumeration value="Software"/>
+      <xs:enumeration value="Sound"/>
+      <xs:enumeration value="Text"/>
+      <xs:enumeration value="StillImage"/>
+      <xs:enumeration value="Service"/>
+      <xs:enumeration value="InteractiveResource"/>
+      <xs:enumeration value="Image"/>
+      <xs:enumeration value="Dataset"/>
+      <xs:enumeration value=""/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="audience_title" type="xs:string"/>
+  <xs:element name="audience_description" type="xs:string"/>
+  <xs:element name="collection_description" type="xs:string"/>
+  <xs:element name="collection_display_title" type="xs:string"/>
+  <xs:element name="collection_title" type="xs:string"/>
+  <xs:element name="collection_thumbnail" type="xs:string"/>
+  <xs:element name="point_datetime_description" type="xs:string"/>
+  <xs:element name="point_datetime_title" type="xs:string"/>
+  <xs:element name="point_datetime_type" type="qsr:type_point_datetime_type"/>
+  <xs:simpleType name="type_point_datetime_type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="exact"/>
+      <xs:enumeration value="circa"/>
+      <xs:enumeration value=""/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="point_datetime" type="xs:string"/>
+  <xs:element name="point_datetime_zone" type="xs:string"/>
+  <xs:element name="source_url" type="xs:string"/>
+  <xs:element name="copyright_name" type="xs:string"/>
+  <xs:element name="part_description" type="xs:string"/>
+  <xs:element name="landing_url" type="xs:string"/>
+  <xs:element name="source" type="xs:string"/>
+  <xs:element name="part_thumbnail" type="xs:ID"/>
+  <xs:element name="language" type="xs:string"/>
+  <xs:element name="part_creation_date" type="xs:string"/>
+  <xs:element name="part_title" type="xs:string"/>
+  <xs:element name="original_filename" type="xs:string"/>
+  <xs:element name="extent" type="xs:string"/>
+  <xs:element name="derivative_type" type="qsr:type_derivative_type"/>
+  <xs:simpleType name="type_derivative_type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="original"/>
+      <xs:enumeration value="derivative"/>
+      <xs:enumeration value="other"/>
+      <xs:enumeration value=""/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="creator_credit" type="xs:string"/>
+  <xs:element name="weight" type="xs:string"/>
+  <xs:element name="role_title" type="xs:string"/>
+  <xs:element name="role_description" type="xs:string"/>
+  <xs:element name="role_level" type="qsr:type_role_level"/>
+  <xs:simpleType name="type_role_level">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="superuser"/>
+      <xs:enumeration value="content loader"/>
+      <xs:enumeration value="internal researcher"/>
+      <xs:enumeration value="external researcher"/>
+      <xs:enumeration value="approver"/>
+      <xs:enumeration value=""/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="role_access" type="qsr:type_role_access"/>
+  <xs:simpleType name="type_role_access">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="update"/>
+      <xs:enumeration value="read only"/>
+      <xs:enumeration value=""/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="address_description" type="xs:string"/>
+  <xs:element name="placename" type="xs:string"/>
+  <xs:element name="postcode" type="xs:string"/>
+  <xs:element name="address_priority" type="qsr:type_address_priority"/>
+  <xs:simpleType name="type_address_priority">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="secondary"/>
+      <xs:enumeration value="mentioned"/>
+      <xs:enumeration value="primary"/>
+      <xs:enumeration value=""/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="address_title" type="xs:string"/>
+  <xs:element name="suburb" type="xs:string"/>
+  <xs:element name="street_name" type="xs:string"/>
+  <xs:element name="city" type="xs:string"/>
+  <xs:element name="po_box" type="xs:string"/>
+  <xs:element name="street_number" type="xs:string"/>
+  <xs:element name="object_creation_date" type="xs:string"/>
+  <xs:element name="object_remote_identifier" type="xs:string"/>
+  <xs:element name="object_title" type="xs:string"/>
+  <xs:element name="" type="xs:string"/>
+  <xs:element name="object_thumbnail" type="xs:string"/>
+  <xs:element name="seo_text" type="xs:string"/>
+  <xs:element name="version" type="xs:string"/>
+  <xs:element name="tags" type="xs:string"/>
+  <xs:element name="availability_description" type="xs:string"/>
+  <xs:element name="availability_title" type="xs:string"/>
+  <xs:element name="category_description" type="xs:string"/>
+  <xs:element name="category_title" type="xs:string"/>
+  <xs:element name="category_domain" type="qsr:type_category_domain"/>
+  <xs:simpleType name="type_category_domain">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DigitalNZ"/>
+      <xs:enumeration value="University of Canterbury"/>
+      <xs:enumeration value="other"/>
+      <xs:enumeration value=""/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="event_title" type="xs:string"/>
+  <xs:element name="event_description" type="xs:string"/>
+  <xs:element name="event_type" type="qsr:type_event_type"/>
+  <xs:simpleType name="type_event_type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="depiction"/>
+      <xs:enumeration value="origination"/>
+      <xs:enumeration value="creation"/>
+      <xs:enumeration value=""/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="person_title" type="xs:string"/>
+  <xs:element name="forenames" type="xs:string"/>
+  <xs:element name="surname" type="xs:string"/>
+  <xs:element name="person_description" type="xs:string"/>
+  <xs:element name="person_display_title" type="xs:string"/>
+  <xs:element name="terms_of_address" type="xs:string"/>
+  <xs:element name="party_email" type="xs:string"/>
+  <xs:element name="party_social_username" type="xs:string"/>
+  <xs:element name="party_social_type" type="qsr:type_party_social_type"/>
+  <xs:simpleType name="type_party_social_type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Twitter"/>
+      <xs:enumeration value="Facebook"/>
+      <xs:enumeration value=""/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="party_title" type="xs:string"/>
+  <xs:element name="party_display_title" type="xs:string"/>
+  <xs:element name="party_phone_number" type="xs:string"/>
+  <xs:element name="party_foreign_uri" type="xs:string"/>
+  <xs:element name="party_url" type="xs:string"/>
+  <xs:element name="party_foreign_identifier" type="xs:string"/>
+  <xs:element name="party_description" type="xs:string"/>
+  <xs:element name="license_description" type="xs:string"/>
+  <xs:element name="license_title" type="xs:string"/>
+  <xs:element name="rights_url" type="xs:string"/>
+  <xs:element name="license_provenance" type="qsr:type_license_provenance"/>
+  <xs:simpleType name="type_license_provenance">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="No known restrictions"/>
+      <xs:enumeration value="Unknown"/>
+      <xs:enumeration value="Some rights reserved"/>
+      <xs:enumeration value="All rights reserved"/>
+      <xs:enumeration value=""/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="license_document" type="xs:ID"/>
+  <xs:element name="position_description" type="xs:string"/>
+  <xs:element name="location" type="xs:string"/>
+  <xs:element name="longitude" type="xs:float"/>
+  <xs:element name="latitude" type="xs:float"/>
+  <xs:element name="position_title" type="xs:string"/>
+  <xs:element name="content_partner_description" type="xs:string"/>
+  <xs:element name="content_partner_title" type="xs:string"/>
+  <xs:element name="content_partner_display_title" type="xs:string"/>
+  <xs:element name="relations">
+    <xs:complexType>
+      <xs:choice>
+        <xs:sequence>
+          <xs:element ref="qsr:loadedInBatch"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:hasConstituentRole"/>
+          <xs:element ref="qsr:loadedInBatch"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:isPublishedBy"/>
+          <xs:element ref="qsr:loadedInBatch"/>
+          <xs:element ref="qsr:isCollectedInto"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:loadedInBatch"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:hasAvailability"/>
+          <xs:element ref="qsr:hasFormat"/>
+          <xs:element ref="qsr:isPartOf"/>
+          <xs:element ref="qsr:hasAddress"/>
+          <xs:element ref="qsr:loadedInBatch"/>
+          <xs:element ref="qsr:hasCategory"/>
+          <xs:element ref="qsr:hasCreatorParty"/>
+          <xs:element ref="qsr:hasRelationshipToEvent"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:loadedInBatch"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:hasPosition"/>
+          <xs:element ref="qsr:loadedInBatch"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:hasSourceParty"/>
+          <xs:element ref="qsr:hasContributorParty"/>
+          <xs:element ref="qsr:hasAddress"/>
+          <xs:element ref="qsr:loadedInBatch"/>
+          <xs:element ref="qsr:hasCategory"/>
+          <xs:element ref="qsr:hasCreatorParty"/>
+          <xs:element ref="qsr:isCollectedInto"/>
+          <xs:element ref="qsr:hasRelationshipToEvent"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:isAvailableTo"/>
+          <xs:element ref="qsr:hasLicense"/>
+          <xs:element ref="qsr:hasEndDateTime"/>
+          <xs:element ref="qsr:hasStartDateTime"/>
+          <xs:element ref="qsr:loadedInBatch"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:loadedInBatch"/>
+          <xs:element ref="qsr:hasCategory"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:hasEndDateTime"/>
+          <xs:element ref="qsr:hasStartDateTime"/>
+          <xs:element ref="qsr:loadedInBatch"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:isTypeOfParty"/>
+          <xs:element ref="qsr:loadedInBatch"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:isMemberOfContentPartner"/>
+          <xs:element ref="qsr:isMemberOfRole"/>
+          <xs:element ref="qsr:hasAddress"/>
+          <xs:element ref="qsr:loadedInBatch"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:loadedInBatch"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:loadedInBatch"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="qsr:loadedInBatch"/>
+        </xs:sequence>
+        <xs:sequence/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hasConstituentRole">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isPublishedBy">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hasAvailability">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hasFormat">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isPartOf">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hasPosition">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hasSourceParty">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hasContributorParty">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hasAddress">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hasCategory">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hasCreatorParty">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isCollectedInto">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hasRelationshipToEvent">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isAvailableTo">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hasLicense">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hasEndDateTime">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hasStartDateTime">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isTypeOfParty">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isMemberOfContentPartner">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isMemberOfRole">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loadedInBatch">
+    <xs:complexType>
+      <xs:attribute name="idref"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

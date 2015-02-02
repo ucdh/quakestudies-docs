@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns="http://quakestudies.canterbury.ac.nz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://quakestudies.canterbury.ac.nz ../qsr.xsd" xmlns:dcmi="http://purl.org/dc/dcmitype/">
+  <Availability xml:id="availability_1">
+    <properties>
+      <availability_name>Public</availability_name>
+    </properties>
+    <relations>
+      <hasLicense idref="#license_1"></hasLicense>
+      <isAvailableTo idref="#audience_1"></isAvailableTo>
+      <hasEndDateTime></hasEndDateTime>
+      <hasStartDateTime idref="#datetime_3"></hasStartDateTime>
+    </relations>
+  </Availability>
+</content>

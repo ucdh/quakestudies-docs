@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns="http://quakestudies.canterbury.ac.nz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://quakestudies.canterbury.ac.nz ../qsr.xsd" xmlns:dcmi="http://purl.org/dc/dcmitype/">
+  <ContentPartner xml:id="content_partner_1">
+    <properties>
+      <content_partner_name>Canterbury Television</content_partner_name>
+      <display_content_partner_name>CTV</display_content_partner_name>
+    </properties>
+    <relations>
+    </relations>
+  </ContentPartner>
+</content>

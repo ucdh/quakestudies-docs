@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Quakestudies Repository: ontology introduction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- note that the custom stylesheet overrides some of the CSS in the above stylesheets. -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+  <!-- <div class="navbar navbar-fixed-top"> -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Quakestudies Repository: ontology introduction</a>
+            <ul class="nav">
+              <li class="active dropdown"><a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Ontology <b class="caret"></b></a>
+              	<ul class="dropdown-menu">
+									<li><a href="index.html">Ontology documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="introduction.html">Ontology introduction</a></li>
+									<li><a href="../owl/ceismic.owl">OWL-RDF ontology</a></li>
+									<li><a href="ontology.html">Ontology description</a></li>
+									<li><a href="vocabularies.html">Vocabularies</a></li>
+									<li><a href="../owl/ceismic.gif">Ontology diagram</a></li>
+									<li><a href="mappings.html">Mappings</a></li>
+              	</ul>
+              </li>
+              <li class="dropdown"><a href="system.html" class="dropdown-toggle" data-toggle="dropdown">System <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="system.html">System documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="system.html#architecture">Architecture</a></li>
+				          <li><a href="system.html#administration_interfaces">Administration interfaces</a></li>
+				          <li><a href="system.html#authentication">Authentication</a></li>
+				          <li><a href="system.html#authorisation">Authorisation</a></li>
+								</ul>
+							</li>
+              <li class="dropdown"><a href="user.html" class="dropdown-toggle" data-toggle="dropdown">User <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="user.html">User documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="user.html#roles">Roles</a></li>
+									<li><a href="user.html#workflows">Workflows</a></li>
+									<li><a href="user.html#bulk_ingest">Generic bulk ingest</a></li>
+									<li><a href="user.html#fedora_vocab">Fedora Vocabulary</a></li>
+								</ul>
+							</li>
+              <li class="dropdown"><a href="api.html" class="dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="api.html">API documentation</a></li>
+									<li class="divider"></li>
+									<li><a href="api.html#Introduction">Introduction</a></li>
+									<li><a href="api.html#ResourceIndexSearch">Resource index search</a></li>
+									<li><a href="api.html#RESTAPI">REST API</a></li>
+								</ul>
+							</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit" style="position: relative;">
+      		<div>
+						<img src="assets/eq-info.jpg" width="200"/>
+					</div>
+      		<div style="position: absolute; left: 300px; top: 52px;">
+						<h1>QSR introduction</h1>
+						<p>Introduction to the QSR ontology
+						</p>
+						<!--
+						<p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+						-->
+					</div>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+
+        <div class="span2">
+					<ul>
+						<li>
+							<a href="#consistency">Consistency of data</a>
+							<ul>
+								<li><a href="#consistency-ontology">Changes to the ontology</a></li>
+								<li><a href="#consistency-capture">Consistency of data capture</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+        <div class="span9">
+					<h1><a name="consistency" href="#"></a>Consistency of data</h1>
+					<p>One of the gaols for Quakestudies Repository is to ensure the long-term consistency of data stored in the repository.
+					This means ensuring that any changes to the ontology or the way data is stored in the repository are of minimal consequence to a researcher wanting to access data across a time series.</p>
+
+					<p>In order to promote this long-term consistency of the Quakestudies data, the following need to be borne in mind:</p>
+
+					<h2><a name="consistency-ontology" href="#"></a>Changes to the ontology</h2>
+					<p>The Drupal interface makes it easy for an administrator to add, modify or delete fields; however it must be understood that doing so may have major consequences for the data consistency.</p>
+					<ul>
+						<li>Adding a new field via the Drupal interface will not result in it being added to any existing class instances; only new class instances will pick up this new field. 
+						If an existing class instance is edited by a user using the Drupal interface, then it will pick up this new field only if some data is entered into it.
+						Therefore the addition of a new field will result in some instances of the class having this new field, and some (the pre-existing instances) not having this field.
+						</li>
+						<li>Deleting a field via the Drupal interface will not result in any existing class instances having this field (and the data that it contains) removed; 
+						only when new class instances are added (or existing class instancres modified) via the Drupal interface will the user no longer have the ability to enter data into this field.
+						</li>
+					</ul>
+					<p>In order to ensure data consistency, the following is recommended:
+						<ul>
+							<li>rather than delete a field via the Drupal interface, it is suggested that instead the field is marked as deprecated in the ontology, and in the Drupal interface the field is hid such that a user never sees this field.<br />
+							This will require
+								<ul>
+									<li>that the field is marked as hidden in the Drupal interface; this will ensure that any contents of the field are hidden from the end user on the Drupal display interface</li>
+									<li>that the field is marked as deprecated in the Drupal edit interface</li>
+								</ul>
+							</li>
+							<li>note that, as Fedora keeps a record of each version, it is still possible to examine any previous state of a particular Fedora record after a field is added or deleted, albeit only via the Fedora Admin interface.</li>
+						</ul>
+					</p>
+
+					<h2><a name="consistency-capture" href="#"></a>Consistency of data capture</h2>
+					<p>With many of the fields being free-text, the Qakestudies <b>Superuser</b> and <b>Content Loaders</b> have considerable leeway when entering data as to the way the data is stored in a given field.</p>
+					<p>It would be advantageous for data consistency if the Quakestudies administrators formulate and adhere to some house style rules regarding the capture of data, such as
+						<ul>
+							<li>Length of data stored in certain fields; In some cases, fields will be truncated for display via the Drupal interface</li>
+							<li>Nomenclature regarding naming class instances (Collection, Object, Part etc)</li>
+							<li>Rules regarding when and wen not to capture ancilliary data such as Party, Person etc (for example, is it worth creating an instance of the Person class if no other details besides the person's name is known?)</li>
+						</ul>
+					</p>
+
+					<!--
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+          -->
+       </div>
+      </div>
+
+      <hr>
+
+      <footer>
+				<p>© 2012 <a href="http://www.canterbury.ac.nz/">University of Canterbury</a>. All rights reserved.</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

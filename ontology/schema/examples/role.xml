@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns="http://quakestudies.canterbury.ac.nz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://quakestudies.canterbury.ac.nz ../qsr.xsd" xmlns:dcmi="http://purl.org/dc/dcmitype/">
+  <Role xml:id="role_1">
+    <properties>
+      <role_level>external</role_level>
+      <role_name>Public</role_name>
+    </properties>
+    <relations>
+      <isConstituentRoleOf></isConstituentRoleOf>
+    </relations>
+  </Role>
+</content>

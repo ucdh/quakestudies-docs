@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns="http://quakestudies.canterbury.ac.nz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://quakestudies.canterbury.ac.nz ../qsr.xsd" xmlns:dcmi="http://purl.org/dc/dcmitype/">
+  <Event xml:id="event_1">
+    <properties>
+      <event_type>Depiction</event_type>
+      <event_name>2010 Canterbury earthquake</event_name>
+    </properties>
+    <relations>
+      <hasEndDateTime></hasEndDateTime>
+      <hasStartDateTime idref="#datetime_2"></hasStartDateTime>
+    </relations>
+  </Event>
+</content>
