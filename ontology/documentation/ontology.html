@@ -74,8 +74,8 @@
 <h2 class="trigger"><a href="#">Format</a></h2>
 <div class="toggle_container">
 <ul>
-<li>An instance of the Format class</li>
-<li>Represents the Format class, and as such is a container element. Note that the identifier will typically be the value of the mime_type element.</li>
+<li>Describes the file type and format of a digital object</li>
+<li>Format instances are created using controlled vocabularies for file type (Dublin Core) and MIME type. All QuakeStudies digital objects should have a Format.</li>
 </ul>
 <table class="element">
 <tr class="element_name"><td colspan="2">format_title</td></tr>
@@ -101,7 +101,7 @@
 </tr>
 <tr>
 <td>Notes:</td>
-<td>Is the human-readable version of DCMI Type (e.g. "MovingImage" =&gt; "Moving Image").</td>
+<td>A human readable title that combines the file_type, and the file's mime_type, eg 'dcmi_text' and 'application_pdf' are presented in the title as 'Text (PDF)'.</td>
 </tr>
 <tr>
 <td>Cardinality:</td>
@@ -109,7 +109,7 @@
 </tr>
 <tr>
 <td>Example:</td>
-<td><pre>&lt;dc:title&gt;Moving Image&lt;/dc:title&gt;</pre></td>
+<td><pre>&lt;dc:title&gt;Text (PDF)&lt;/dc:title&gt;</pre></td>
 </tr>
 </table>
 <table class="element">
@@ -132,11 +132,11 @@
 </tr>
 <tr>
 <td>Definition:</td>
-<td>Equivalent to dc:description</td>
+<td>A DCMI compatible description.</td>
 </tr>
 <tr>
 <td>Notes:</td>
-<td></td>
+<td>Not used.</td>
 </tr>
 <tr>
 <td>Cardinality:</td>

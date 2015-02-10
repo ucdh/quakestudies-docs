@@ -13,13 +13,13 @@
   <owl:Ontology rdf:about=""/>
   <rdfs:Class rdf:ID="Format">
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >An instance of the Format class</rdfs:label>
+    >Describes the file type and format of a digital object</rdfs:label>
     <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >&lt;qsr:format id=”text/xsl”&gt;
   &lt;qsr:mime_type&gt;text/xsl&lt;/qsr: mime_type&gt;
 &lt;/qsr:format&gt;</rdfs:isDefinedBy>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Represents the Format class, and as such is a container element. Note that the identifier will typically be the value of the mime_type element.</rdfs:comment>
+            >Format instances are created using controlled vocabularies for file type (Dublin Core) and MIME type. All QuakeStudies digital objects should have a Format.</rdfs:comment>
   </rdfs:Class>
   <rdfs:Class rdf:ID="Audience">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -647,9 +647,9 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >&lt;dc:title&gt;Moving Image&lt;/dc:title&gt;</rdfs:isDefinedBy>
+    >&lt;dc:title&gt;Text (PDF)&lt;/dc:title&gt;</rdfs:isDefinedBy>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Is the human-readable version of DCMI Type (e.g. "MovingImage" =&gt; "Moving Image").</rdfs:comment>
+    >A human readable title that combines the file_type, and the file's mime_type, eg 'dcmi_text' and 'application_pdf' are presented in the title as 'Text (PDF)'.</rdfs:comment>
     <rdfs:domain rdf:resource="#Format"/>
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Equivalent to dc:title</rdfs:label>
@@ -833,7 +833,9 @@ It is expected that this element would only be exposed to search engines where a
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >Equivalent to dc:description</rdfs:label>
+    >A DCMI compatible description.</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Not used.</rdfs:comment>
     <rdfs:domain rdf:resource="#Format"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:ID="version">
